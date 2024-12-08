@@ -1,0 +1,27 @@
+---
+const technologies = [
+  "React",
+  "Next.js",
+  "Vue",
+  "Angular",
+  "Svelte",
+  "TypeScript",
+  "JavaScript",
+  "Web Animations",
+  "Server Side Rendering",
+  "Performance Optimization",
+];
+---
+
+<section class='py-16'>
+  <h2 class='text-2xl font-bold mb-8'>Technologies I Work With</h2>
+  <div class='flex flex-wrap gap-4'>
+    {
+      technologies.map((tech) => (
+        <div class='px-4 py-2 bg-slate-100 dark:bg-slate-900 rounded-lg text-slate-600 dark:text-slate-400'>
+          {tech}
+        </div>
+      ))
+    }
+  </div>
+</section>

@@ -1,0 +1,105 @@
+---
+interface SocialPost {
+  type: "linkedin" | "twitter";
+  url: string;
+  width?: number;
+  height?: number;
+  gridSpan?: "col" | "row" | "both";
+}
+
+const socialPosts: SocialPost[] = [
+  {
+    type: "linkedin",
+    url: "urn:li:share:7265138313227882497",
+    height: 648,
+    width: 504,
+    gridSpan: "both",
+  },
+  {
+    type: "twitter",
+    url: "1848826487064895985",
+    gridSpan: "col",
+  },
+];
+---
+
+<section class='py-16'>
+  <h2 class='text-2xl font-bold mb-8'>Social Updates</h2>
+  <div class='grid grid-cols-1 md:grid-cols-2 gap-4 auto-rows-[400px]'>
+    {
+      socialPosts.map((post) => (
+        <div
+          class:list={[
+            "rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-900",
+            {
+              "md:col-span-2": post.gridSpan === "col" || post.gridSpan === "both",
+              "row-span-2": post.gridSpan === "row" || post.gridSpan === "both",
+            },
+          ]}
+        >
+          {post.type === "linkedin" ? (
+            <iframe
+              src={`https://www.linkedin.com/embed/feed/update/${post.url}`}
+              height={post.height || "100%"}
+              width={post.width || "100%"}
+              frameborder='0'
+              allowfullscreen=''
+              title='Embedded LinkedIn post'
+              class='w-full h-full'
+            />
+          ) : (
+            <div class='twitter-embed' data-tweet-id={post.url} />
+          )}
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<script is:inline>
+  console.log("SocialFeed");
+  // Load Twitter widgets
+  if (document.querySelector(".twitter-embed")) {
+    const script = document.createElement("script");
+    script.src = "https://platform.twitter.com/widgets.js";
+    script.async = true;
+    document.head.appendChild(script);
+
+    // Initialize Twitter embeds once the script is loaded
+    script.onload = () => {
+      document.querySelectorAll(".twitter-embed").forEach((element) => {
+        const tweetId = element.getAttribute("data-tweet-id");
+        // @ts-ignore - twttr is added by the Twitter script
+        window.twttr.widgets.createTweet(tweetId, element, {
+          theme: document.documentElement.classList.contains("dark") ? "dark" : "light",
+        });
+      });
+    };
+  }
+
+  // Update Twitter embeds theme when system theme changes
+  const updateTwitterTheme = () => {
+    document.querySelectorAll(".twitter-embed").forEach((element) => {
+      const tweetId = element.getAttribute("data-tweet-id");
+      element.innerHTML = "";
+      // @ts-ignore - twttr is added by the Twitter script
+      window.twttr?.widgets.createTweet(tweetId, element, {
+        theme: document.documentElement.classList.contains("dark") ? "dark" : "light",
+      });
+    });
+  };
+
+  // Listen for theme changes
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.target === document.documentElement && mutation.attributeName === "class") {
+        updateTwitterTheme();
+      }
+    });
+  });
+
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["class"],
+  });
+</script>
