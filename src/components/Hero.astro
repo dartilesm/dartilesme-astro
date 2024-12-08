@@ -1,0 +1,54 @@
+---
+import SocialLink from "./ui/SocialLink.astro";
+
+interface SocialLink {
+  platform: string;
+  url: string;
+  icon: string;
+}
+
+const socialLinks: SocialLink[] = [
+  {
+    platform: "GitHub",
+    url: "https://github.com/dartilesm",
+    icon: "github",
+  },
+  {
+    platform: "LinkedIn",
+    url: "https://linkedin.com/in/dartiles",
+    icon: "linkedin",
+  },
+  {
+    platform: "X",
+    url: "https://x.com/dartilesm",
+    icon: "twitter",
+  },
+];
+---
+
+<section class='py-16 sm:py-20'>
+  <div class='grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-8'>
+    <div class='space-y-4'>
+      <h1 class='text-3xl font-bold tracking-tight sm:text-5xl'>Hi, I'm Diego Artiles</h1>
+      <h2 class='text-xl font-semibold text-indigo-600 dark:text-indigo-400'>Frontend Developer</h2>
+      <p class='text-slate-600 dark:text-slate-400 max-w-prose'>
+        Experienced Frontend Developer specializing in modern web technologies and performance
+        optimization. With 7+ years of hands-on experience building scalable applications using
+        React, Next.js, Vue, and Angular. Passionate about creating engaging user experiences
+        through interactive animations and efficient, maintainable code.
+      </p>
+      <ul class='flex gap-4'>
+        {
+          socialLinks.map((socialLink) => (
+            <li>
+              <SocialLink {...socialLink} />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class='flex justify-center'>
+      <img src='/your-image.jpg' alt='Diego Artiles' class='w-48 h-48 rounded-full object-cover' />
+    </div>
+  </div>
+</section>
