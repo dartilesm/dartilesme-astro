@@ -1,0 +1,133 @@
+<div class='relative'>
+  <button
+    id='themeToggle'
+    class='inline-flex items-center justify-center w-8 h-8 rounded-lg transition-colors hover:bg-slate-200 dark:hover:bg-slate-700'
+    aria-label='Toggle theme'
+  >
+    <!-- Sun icon -->
+    <svg
+      width='24'
+      height='24'
+      viewBox='0 0 24 24'
+      fill='none'
+      class='transform transition-transform scale-100 dark:scale-0'
+    >
+      <path
+        d='M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z'
+        stroke='currentColor'
+        stroke-width='2'
+        stroke-linejoin='round'></path>
+      <path
+        d='M12 2V4M12 20V22M4 12H2M6.31412 6.31412L4.8999 4.8999M17.6859 6.31412L19.1001 4.8999M6.31412 17.69L4.8999 19.1042M17.6859 17.69L19.1001 19.1042M22 12H20'
+        stroke='currentColor'
+        stroke-width='2'
+        stroke-linecap='round'></path>
+    </svg>
+    <!-- Moon icon -->
+    <svg
+      width='24'
+      height='24'
+      viewBox='0 0 24 24'
+      fill='none'
+      class='absolute transform transition-transform scale-0 dark:scale-100'
+    >
+      <path
+        d='M21.9548 12.9564C20.5779 15.3717 17.9791 17.0001 15 17.0001C10.5817 17.0001 7 13.4184 7 9.00006C7 6.02097 8.62837 3.42225 11.0436 2.04529C5.96756 2.52399 2 6.79468 2 12C2 17.5229 6.47715 22 12 22C17.2053 22 21.476 18.0324 21.9548 12.9564Z'
+        stroke='currentColor'
+        stroke-width='2'
+        stroke-linejoin='round'></path>
+    </svg>
+  </button>
+  <!-- Theme selection dropdown -->
+  <div
+    id='themeDropdown'
+    class='absolute right-0 mt-2 w-36 rounded-lg bg-white dark:bg-slate-800 shadow-lg ring-1 ring-slate-900/10 dark:ring-white/10 hidden'
+  >
+    <div class='py-1'>
+      <button
+        class='theme-option w-full px-4 py-2 text-sm text-left text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700'
+        data-theme='light'
+      >
+        Light
+      </button>
+      <button
+        class='theme-option w-full px-4 py-2 text-sm text-left text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700'
+        data-theme='dark'
+      >
+        Dark
+      </button>
+      <button
+        class='theme-option w-full px-4 py-2 text-sm text-left text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700'
+        data-theme='system'
+      >
+        System
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Initial setup
+  const theme = (() => {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      return localStorage.getItem("theme");
+    }
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  })();
+
+  function setTheme(theme: string, mode = "manual") {
+    if (theme === "light") {
+      document.documentElement.classList.remove("dark");
+    } else {
+      document.documentElement.classList.add("dark");
+    }
+    localStorage.setItem("theme", theme);
+    localStorage.setItem("themeMode", mode);
+  }
+
+  // Set initial theme
+  setTheme(theme, localStorage.getItem("themeMode") || "system");
+
+  // Handle system theme changes
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+    if (localStorage.getItem("themeMode") === "system") {
+      setTheme(e.matches ? "dark" : "light", "system");
+    }
+  });
+
+  // Handle theme toggle and dropdown
+  const themeToggle = document.getElementById("themeToggle");
+  const themeDropdown = document.getElementById("themeDropdown");
+  const themeOptions = document.querySelectorAll(".theme-option");
+
+  // Toggle dropdown
+  themeToggle?.addEventListener("click", () => {
+    themeDropdown?.classList.toggle("hidden");
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!themeToggle?.contains(e.target as Node)) {
+      themeDropdown?.classList.add("hidden");
+    }
+  });
+
+  // Handle theme selection
+  themeOptions.forEach((option) => {
+    option.addEventListener("click", () => {
+      const selectedTheme = option.getAttribute("data-theme");
+      if (selectedTheme === "system") {
+        setTheme(
+          window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light",
+          "system"
+        );
+      } else {
+        setTheme(selectedTheme!, "manual");
+      }
+      themeDropdown?.classList.add("hidden");
+    });
+  });
+</script>

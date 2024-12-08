@@ -1,0 +1,156 @@
+---
+import Card from "./ui/Card.astro";
+import Button from "./ui/Button.astro";
+import Tag from "./ui/Tag.astro";
+import { Image } from "astro:assets";
+import MakefyProjectImg from "../assets/makefy.jpeg";
+import BlogProjectImg from "../assets/blog.jpeg";
+
+interface Project {
+  title: string;
+  description: string;
+  image: ImageMetadata;
+  tags: string[];
+  liveUrl?: string;
+  githubUrl: string;
+  status: "completed" | "in-progress";
+  featured?: boolean;
+}
+
+const projects: Project[] = [
+  {
+    title: "Makefy",
+    description:
+      "A monorepo project of a collection of AI tools to accelerate your work. Including a chat-with-pdf, text tools like Q&A generator, Podcast script generator, and more.",
+    image: MakefyProjectImg,
+    tags: ["Next.js", "Supabase", "Shadcn", "AI Vercel SDK"],
+    githubUrl: "https://github.com/dartilesm/makefy",
+    status: "in-progress",
+    featured: true,
+  },
+  {
+    title: "DartilesDev",
+    description:
+      "A personal blog platform built to share technical knowledge and insights about web development, focusing on modern frontend technologies and best practices.",
+    image: BlogProjectImg,
+    tags: ["Svelte"],
+    githubUrl: "https://github.com/dartilesm/dartilesdev",
+    status: "completed",
+  },
+];
+---
+
+<section class='py-16'>
+  <h2 class='text-2xl font-bold mb-8'>Featured Projects</h2>
+  <div class='grid grid-cols-1 gap-8 md:grid-cols-2'>
+    {
+      projects.map((project) => (
+        <Card
+          variant={project.featured ? "background" : "default"}
+          class={project.featured ? "md:col-span-2 h-[500px]" : ""}
+        >
+          {project.featured && (
+              <Image
+                src={project.image}
+                alt={project.title}
+                slot='background'
+                class='w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 absolute -z-10'
+              />
+              <div class='flex flex-col justify-end h-full p-6 gap-2'>
+                <div class='flex items-center gap-2'>
+                  <h3 class='text-2xl font-semibold text-white'>{project.title}</h3>
+                  {project.status === "in-progress" && (
+                    <div class='flex items-center gap-2 pt-1'>
+                      <span class='relative flex h-2 w-2'>
+                          <span
+                          class="absolute inline-flex h-full w-full rounded-full opacity-75 bg-yellow-400 animate-ping"
+                          />
+                          <span
+                          class="relative inline-flex rounded-full h-2 w-2 bg-yellow-500"
+                          />
+                      </span>
+                      <span class="text-xs text-yellow-300">In Progress</span>
+                    </div>
+                  )}
+                </div>
+                <p class='text-slate-200 max-w-xl'>{project.description}</p>
+                <div class='flex flex-wrap gap-2 mb-4'>
+                  {project.tags.map((tag) => (
+                    <Tag class='bg-white/10 text-white'>{tag}</Tag>
+                  ))}
+                </div>
+                <div class='flex gap-4'>
+                  {project.liveUrl && (
+                    <Button
+                      href={project.liveUrl}
+                      variant='primary'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      View Project
+                    </Button>
+                  )}
+                  <Button
+                    href={project.githubUrl}
+                    variant='secondary'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    class='text-white hover:text-white'
+                  >
+                    View Code
+                  </Button>
+                </div>
+              </div>
+          )}
+          {!project.featured && (
+              <Image src={project.image} alt={project.title} class='w-full h-60 object-cover' />
+              <div class='p-6 flex gap-2 flex-col'>
+                <div class='flex items-center gap-2'>
+                  <h3 class='text-xl font-semibold'>{project.title}</h3>
+                  {project.status === "in-progress" && (
+                    <div class='flex items-center gap-2 pt-1'>
+                      <span class='relative flex h-2 w-2'>
+                          <span
+                          class="absolute inline-flex h-full w-full rounded-full opacity-75 bg-yellow-400 animate-ping  "
+                          />
+                          <span
+                          class="relative inline-flex rounded-full h-2 w-2 bg-yellow-500"
+                          />
+                      </span>
+                      <span class="text-xs text-yellow-300">In Progress</span>
+                    </div>
+                  )}
+                </div>
+                <p class='text-slate-600 dark:text-slate-400'>{project.description}</p>
+                <div class='flex flex-wrap gap-2'>
+                  {project.tags.map((tag) => (
+                    <Tag>{tag}</Tag>
+                  ))}
+                </div>
+                <div class='flex gap-4'>
+                  {project.liveUrl && (
+                    <Button
+                      href={project.liveUrl}
+                      variant='primary'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      View Project
+                    </Button>
+                  )}
+                  <Button
+                    href={project.githubUrl}
+                    variant='secondary'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    View Code
+                  </Button>
+                </div>
+              </div>
+          )}
+        </Card>
+      ))
+    }
+  </div>
+</section>
