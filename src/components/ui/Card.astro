@@ -9,12 +9,17 @@ const { class: className = "", variant = "default" } = Astro.props;
 
 {
   variant === "default" ? (
-    <article class:list={["bg-slate-100 dark:bg-slate-900 rounded-lg overflow-hidden", className]}>
+    <article
+      class:list={[
+        "max-w-sm bg-white rounded-lg shadow dark:bg-indigo-950/50 overflow-hidden",
+        className,
+      ]}
+    >
       <slot />
     </article>
   ) : (
     <article class:list={["relative rounded-lg overflow-hidden group", className]}>
-      <div class='absolute inset-0 bg-gradient-to-b from-transparent via-slate-950/50 to-slate-950/80' />
+      <div class='absolute inset-0 bg-gradient-to-b from-transparent md:via-slate-950/50 md:to-slate-950/80 via-slate-950/80 to-slate-950' />
       <div class='absolute inset-0'>
         <slot name='background' />
       </div>

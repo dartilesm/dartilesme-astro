@@ -5,6 +5,7 @@ import Tag from "./ui/Tag.astro";
 import { Image } from "astro:assets";
 import MakefyProjectImg from "../assets/makefy.jpeg";
 import BlogProjectImg from "../assets/blog.jpeg";
+import { Icon } from "astro-icon/components";
 
 interface Project {
   title: string;
@@ -24,6 +25,7 @@ const projects: Project[] = [
       "A monorepo project of a collection of AI tools to accelerate your work. Including a chat-with-pdf, text tools like Q&A generator, Podcast script generator, and more.",
     image: MakefyProjectImg,
     tags: ["Next.js", "Supabase", "Shadcn", "AI Vercel SDK"],
+    liveUrl: "https://makefy.app",
     githubUrl: "https://github.com/dartilesm/makefy",
     status: "in-progress",
     featured: true,
@@ -36,7 +38,7 @@ const projects: Project[] = [
     tags: ["Svelte"],
     githubUrl: "https://github.com/dartilesm/dartilesdev",
     status: "completed",
-  },
+  }
 ];
 ---
 
@@ -86,18 +88,29 @@ const projects: Project[] = [
                       variant='primary'
                       target='_blank'
                       rel='noopener noreferrer'
+                      class='group/button'
                     >
                       View Project
+                      <Icon
+                        name='external-link'
+                        slot='icon'
+                        class='group-hover/button:translate-x-1 transition-transform duration-200'
+                      />
                     </Button>
                   )}
                   <Button
                     href={project.githubUrl}
-                    variant='secondary'
+                    variant={project.liveUrl ? "ghost" : "primary"}
                     target='_blank'
                     rel='noopener noreferrer'
-                    class='text-white hover:text-white'
+                    class='text-white hover:text-white dark:hover:text-indigo-800 group/button'
                   >
                     View Code
+                    <Icon
+                        name='external-link'
+                        slot='icon'
+                        class='group-hover/button:translate-x-1 transition-transform duration-200'
+                      />
                   </Button>
                 </div>
               </div>
@@ -122,7 +135,7 @@ const projects: Project[] = [
                   )}
                 </div>
                 <p class='text-slate-600 dark:text-slate-400'>{project.description}</p>
-                <div class='flex flex-wrap gap-2'>
+                <div class='flex flex-wrap gap-2 mb-4'>
                   {project.tags.map((tag) => (
                     <Tag>{tag}</Tag>
                   ))}
@@ -134,17 +147,29 @@ const projects: Project[] = [
                       variant='primary'
                       target='_blank'
                       rel='noopener noreferrer'
+                      class='group/button'
                     >
                       View Project
+                      <Icon
+                        name='external-link'
+                        slot='icon'
+                        class='group-hover/button:translate-x-1 transition-transform duration-200'
+                      />
                     </Button>
                   )}
                   <Button
                     href={project.githubUrl}
-                    variant='secondary'
+                    variant={project.liveUrl ? "ghost" : "primary"}
                     target='_blank'
                     rel='noopener noreferrer'
+                    class='group/button'
                   >
                     View Code
+                    <Icon
+                        name='external-link'
+                        slot='icon'
+                        class='group-hover/button:translate-x-1 transition-transform duration-200'
+                      />
                   </Button>
                 </div>
               </div>

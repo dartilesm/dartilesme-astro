@@ -1,0 +1,12 @@
+{
+    "rewrites": [
+        {
+            "source": "/stats/js/:path*",
+            "destination": "https://plausible.io/js/:path*"
+        },
+        {
+            "source": "/stats/api/event",
+            "destination": "https://plausible.io/api/event"
+        }
+    ]
+}
