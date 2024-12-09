@@ -1,17 +1,1 @@
----
-// Get url object
-const { url } = Astro;
-// Get source query param
-const source = url.searchParams.get("source") || undefined;
----
-
-<script
-  defer
-  event-source={source}
-  data-domain='dartiles.me'
-  src='/stats/js/script.pageview-props.outbound-links.js'
-  data-api='/stats/api/event'></script>
-<script>
-  if (window.location.search)
-    window.history.replaceState({}, document.title, window.location.origin);
-</script>
+<script defer data-domain='dartiles.me' src='/stats/js/script.js'></script>
