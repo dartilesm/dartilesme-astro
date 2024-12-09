@@ -1,34 +1,38 @@
 ---
+import { Image } from "astro:assets";
 import SocialLink from "./ui/SocialLink.astro";
+import DiegoPhoto from "../assets/me2.png";
+import { Icon } from "astro-icon/components";
+import Button from "./ui/Button.astro";
 
 interface SocialLink {
-  platform: string;
   url: string;
   icon: string;
 }
 
 const socialLinks: SocialLink[] = [
   {
-    platform: "GitHub",
     url: "https://github.com/dartilesm",
     icon: "github",
   },
   {
-    platform: "LinkedIn",
     url: "https://linkedin.com/in/dartiles",
     icon: "linkedin",
   },
   {
-    platform: "X",
     url: "https://x.com/dartilesm",
-    icon: "twitter",
+    icon: "x",
+  },
+  {
+    url: "mailto:diego@dartiles.dev?subject=I'm interested in your profile. Reaching out from dartiles.me",
+    icon: "mail",
   },
 ];
 ---
 
 <section class='py-16 sm:py-20'>
-  <div class='grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-8'>
-    <div class='space-y-4'>
+  <div class='flex flex-col-reverse gap-12 md:flex-row md:gap-8'>
+    <div class='space-y-4 max-w-[500px] w-full'>
       <h1 class='text-3xl font-bold tracking-tight sm:text-5xl'>Hi, I'm Diego Artiles</h1>
       <h2 class='text-xl font-semibold text-indigo-600 dark:text-indigo-400'>Frontend Developer</h2>
       <p class='text-slate-600 dark:text-slate-400 max-w-prose'>
@@ -37,18 +41,43 @@ const socialLinks: SocialLink[] = [
         React, Next.js, Vue, and Angular. Passionate about creating engaging user experiences
         through interactive animations and efficient, maintainable code.
       </p>
-      <ul class='flex gap-4'>
+      <ul class='flex'>
         {
           socialLinks.map((socialLink) => (
             <li>
-              <SocialLink {...socialLink} />
+              <Button
+                href={socialLink.url}
+                target='_blank'
+                rel='noopener noreferrer'
+                variant='icon'
+              >
+                <Icon name={socialLink.icon} />
+              </Button>
             </li>
           ))
         }
+        <li>
+          <Button
+            href='https://dartiles.link/cv'
+            variant='primary'
+            target='_blank'
+            rel='noopener noreferrer'
+            class='group'
+          >
+            Resume
+            <Icon
+              name='arrow-right'
+              slot='icon'
+              class='group-hover:translate-x-1 transition-transform duration-200'
+            />
+          </Button>
+        </li>
       </ul>
     </div>
-    <div class='flex justify-center'>
-      <img src='/your-image.jpg' alt='Diego Artiles' class='w-48 h-48 rounded-full object-cover' />
+    <div class='flex justify-end max-md:justify-center w-full'>
+      <div>
+        <Image src={DiegoPhoto} alt='Diego Artiles' class='aspect-[8/11] max-w-60' />
+      </div>
     </div>
   </div>
 </section>
