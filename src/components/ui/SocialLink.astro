@@ -1,18 +1,15 @@
 ---
+import Button from "./Button.astro";
+
 interface Props {
   platform: string;
   url: string;
-  icon: string;
+  icon: ImageMetadata | string;
 }
 
 const { platform, url } = Astro.props;
 ---
 
-<a
-  href={url}
-  target='_blank'
-  rel='noopener noreferrer'
-  class='text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors'
->
+<Button href={url} target='_blank' rel='noopener noreferrer' variant='icon'>
   {platform}
-</a>
+</Button>
