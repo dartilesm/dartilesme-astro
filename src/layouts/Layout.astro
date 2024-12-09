@@ -19,7 +19,7 @@ const { title } = Astro.props;
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
 
-    <script defer data-domain='dartiles.me' src='/js/script.js'></script>
+    <script is:inline data-domain='dartiles.me' src='/js/script.js'></script>
   </head>
   <body
     class='bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 transition-colors overflow-x-hidden'
