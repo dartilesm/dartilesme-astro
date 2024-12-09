@@ -1,35 +1,47 @@
 ---
 interface Props {
+  id?: string;
   href?: string;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "outline" | "icon" | "ghost";
   target?: string;
   rel?: string;
   class?: string;
 }
 
-const { href, variant = "primary", target, rel, class: className = "" } = Astro.props;
+const { href, id, variant = "primary", target, rel, class: className = "" } = Astro.props;
 
-const baseStyles = "inline-flex items-center justify-center px-4 py-2 rounded-lg transition-colors";
+const baseStyles =
+  "inline-flex items-center justify-center rounded-3xl font-medium transition-all duration-200 gap-2";
+
 const variants = {
-  primary: "bg-indigo-500 text-white hover:bg-indigo-600",
-  secondary: "text-slate-400 hover:text-slate-300",
+  primary:
+    "text-white bg-indigo-700 hover:bg-indigo-800 focus:outline-none focus:ring-4 focus:ring-indigo-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800",
+  secondary:
+    "py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700",
+  outline:
+    "h-10 px-4 border border-indigo-300 text-indigo-700 hover:bg-indigo-100 hover:text-indigo-800 hover:border-indigo-400 focus:ring-2 focus:ring-indigo-600/50 focus:ring-offset-2",
+  icon: "text-muted-foreground dark:text-white bg-transparent hover:scale-110 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-full text-lg p-2.5 text-center inline-flex items-center me-2 hover:scale-110 dark:focus:ring-indigo-800 h-10 w-10",
+  ghost:
+    "h-10 px-4 text-indigo-600 hover:bg-indigo-100 hover:text-indigo-800 focus:ring-2 focus:ring-indigo-600/50 focus:ring-offset-2",
 };
 ---
 
 {
   href ? (
     <a
+      id={id}
       href={href}
       target={target}
       rel={rel}
       class:list={[baseStyles, variants[variant], className]}
     >
       <slot />
+      {variant !== "icon" && <slot name='icon' />}
     </a>
   ) : (
-    <button class:list={[baseStyles, variants[variant], className]}>
+    <button id={id} class:list={[baseStyles, variants[variant], className]}>
       <slot />
+      {variant !== "icon" && <slot name='icon' />}
     </button>
   )
 }
-

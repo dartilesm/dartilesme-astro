@@ -1,0 +1,43 @@
+---
+import ThemeToggle from "./ui/ThemeToggle.astro";
+import { Image } from "astro:assets";
+import logo from "../assets/logo.webp";
+
+let isScrolled = false;
+---
+
+<header
+  class='fixed top-0 w-full z-50 transition-colors duration-300'
+  id='header'
+  data-scrolled='false'
+>
+  <div class='max-w-5xl mx-auto px-4 py-3 flex justify-between items-center'>
+    <a href='/' class='flex items-center gap-2'>
+      <Image src={logo} alt='Logo' width={32} height={32} class='w-8 h-8' />
+    </a>
+    <ThemeToggle />
+  </div>
+</header>
+
+<script>
+  const header = document.querySelector("#header");
+
+  function updateHeaderBackground() {
+    if (!header) return;
+    const isScrolled = window.scrollY >= 200;
+    header.setAttribute("data-scrolled", isScrolled.toString());
+  }
+
+  // Initial check
+  updateHeaderBackground();
+
+  // Add scroll listener
+  window.addEventListener("scroll", updateHeaderBackground);
+</script>
+
+<style>
+  /* Apply background styles based on data-scrolled attribute */
+  header[data-scrolled="true"] {
+    @apply bg-white/80 dark:bg-slate-950/80 backdrop-blur;
+  }
+</style>
