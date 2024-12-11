@@ -9,11 +9,11 @@ export const getLinkedinRelationship = (relationship: string, name: string): str
     case 'RECOMMENDEE_SENIOR_THAN_RECOMMENDER':
       return `Diego was more senior than ${name}`;
     case 'WORKED_IN_SAME_GROUP':
-      return `Diego and ${name} worked in the same company`;
+      return `${name} worked with Diego in the same team`;
     case 'WORKED_IN_DIFFERENT_GROUPS':
-      return `Diego and ${name} worked in different groups`;
+      return `${name} worked with Diego in different teams`;
     case 'WORKED_IN_DIFFERENT_COMPANIES':
-      return `Diego and ${name} worked in different companies`;
+      return `${name} and Diego worked in different companies`;
     case 'RECOMMENDEE_IS_CLIENT_OF_RECOMMENDER':
       return `Diego was a client of ${name}`;
     case 'RECOMMENDER_IS_CLIENT_OF_RECOMMENDEE':
