@@ -12,6 +12,9 @@ export default defineConfig({
       mode: "sprite"
     }
   },
+  image: {
+    domains: ["media.licdn.com"]
+  },
   integrations: [tailwind(), icon({
     iconDir: 'src/assets/icons'
   })]

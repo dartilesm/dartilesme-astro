@@ -1,0 +1,82 @@
+---
+import { Image } from "astro:assets";
+import Card from "./ui/Card.astro";
+import profileDataJSON from "../../public/recommendations.json";
+import type { LinkedInProfileData } from "../types/linkedin";
+import { getLinkedinRelationship } from "../utils/get-linkedin-relationship";
+import ProfilePlaceholder from "../assets/profile-placeholder.jpg";
+
+const recommendations = profileDataJSON.data
+  .receivedRecommendation as LinkedInProfileData["data"]["receivedRecommendation"];
+
+function getDateFromTimestamp(timestamp: number) {
+  const date = new Date(timestamp);
+  const month = date.toLocaleString("default", { month: "long" });
+  const year = date.getFullYear();
+  return `${month} ${year}`;
+}
+---
+
+<section class='py-16'>
+  <h2 class='text-2xl font-bold mb-8'>What people say about me</h2>
+  <div class='flex flex-row flex-wrap gap-6'>
+    {
+      recommendations.map(
+        (recommendation: LinkedInProfileData["data"]["receivedRecommendation"][number]) => (
+          <Card>
+            <div class='p-6 flex flex-col gap-4'>
+              <div class='flex items-start gap-4'>
+                {recommendation.recommender.profilePictures[0].url && (
+                  <Image
+                    src={recommendation.recommender.profilePictures[0].url}
+                    alt={
+                      recommendation.recommender.firstName +
+                      " " +
+                      recommendation.recommender.lastName
+                    }
+                    width={48}
+                    height={48}
+                    class='rounded-full object-cover'
+                  />
+                )}
+                {!recommendation.recommender.profilePictures[0].url && (
+                  <Image
+                    src={ProfilePlaceholder}
+                    alt={
+                      recommendation.recommender.firstName +
+                      " " +
+                      recommendation.recommender.lastName
+                    }
+                    width={48}
+                    height={48}
+                    class='rounded-full object-cover'
+                  />
+                )}
+                <div>
+                  <h3 class='font-semibold'>
+                    {recommendation.recommender.firstName +
+                      " " +
+                      recommendation.recommender.lastName}
+                  </h3>
+                  <p class='text-sm text-slate-600 dark:text-slate-400'>
+                    {recommendation.recommender.occupation}
+                  </p>
+                  <p class='text-xs text-slate-500 dark:text-slate-500'>
+                    {getLinkedinRelationship(
+                      recommendation.relationship,
+                      recommendation.recommender.firstName
+                    )}{" "}
+                    • {getDateFromTimestamp(recommendation.created)}
+                  </p>
+                </div>
+              </div>
+              <blockquote class='text-slate-600 dark:text-slate-400 text-sm'>
+                "{recommendation.text}"
+              </blockquote>
+            </div>
+          </Card>
+        )
+      )
+    }
+  </div>
+</section>
