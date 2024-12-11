@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import Card from "./ui/Card.astro";
+import Button from "./ui/Button.astro";
+import { Icon } from "astro-icon/components";
 import profileDataJSON from "../../public/recommendations.json";
 import type { LinkedInProfileData } from "../types/linkedin";
 import { getLinkedinRelationship } from "../utils/get-linkedin-relationship";
@@ -18,15 +20,19 @@ function getDateFromTimestamp(timestamp: number) {
 ---
 
 <section class='py-16'>
-  <h2 class='text-2xl font-bold mb-8'>What people say about me</h2>
-  <div class='flex flex-row flex-wrap gap-6'>
+  <div class='flex justify-between items-center mb-8'>
+    <h2 class='text-2xl font-bold'>What people say about me</h2>
+  </div>
+  <div
+    class='grid xs:grid-cols-1 sm:grid-cols-[repeat(2,_minmax(0,_max-content))] lg:grid-cols-3 gap-6 mb-8'
+  >
     {
-      recommendations.map(
-        (recommendation: LinkedInProfileData["data"]["receivedRecommendation"][number]) => (
-          <Card>
-            <div class='p-6 flex flex-col gap-4'>
-              <div class='flex items-start gap-4'>
-                {recommendation.recommender.profilePictures[0].url && (
+      recommendations.map((recommendation) => (
+        <Card class='h-full'>
+          <div class='p-6 flex flex-col gap-4 h-full'>
+            <div class='flex items-start gap-4'>
+              <div class='flex-shrink-0 relative'>
+                {recommendation.recommender.profilePictures[0].url ? (
                   <Image
                     src={recommendation.recommender.profilePictures[0].url}
                     alt={
@@ -36,10 +42,9 @@ function getDateFromTimestamp(timestamp: number) {
                     }
                     width={48}
                     height={48}
-                    class='rounded-full object-cover'
+                    class='rounded-full object-cover outline outline-2 dark:outline-slate-600 outline-slate-300 outline-offset-2'
                   />
-                )}
-                {!recommendation.recommender.profilePictures[0].url && (
+                ) : (
                   <Image
                     src={ProfilePlaceholder}
                     alt={
@@ -49,34 +54,52 @@ function getDateFromTimestamp(timestamp: number) {
                     }
                     width={48}
                     height={48}
-                    class='rounded-full object-cover'
+                    class='rounded-full object-cover outline outline-2 dark:outline-slate-600 outline-slate-300 outline-offset-2'
                   />
                 )}
-                <div>
-                  <h3 class='font-semibold'>
-                    {recommendation.recommender.firstName +
-                      " " +
-                      recommendation.recommender.lastName}
-                  </h3>
-                  <p class='text-sm text-slate-600 dark:text-slate-400'>
-                    {recommendation.recommender.occupation}
-                  </p>
-                  <p class='text-xs text-slate-500 dark:text-slate-500'>
-                    {getLinkedinRelationship(
-                      recommendation.relationship,
-                      recommendation.recommender.firstName
-                    )}{" "}
-                    • {getDateFromTimestamp(recommendation.created)}
-                  </p>
+                <div class='absolute -bottom-1 -right-1 bg-[#0A66C2] rounded-full p-1'>
+                  <Icon name='linkedin2' class='w-4 h-4 text-white' />
                 </div>
               </div>
-              <blockquote class='text-slate-600 dark:text-slate-400 text-sm'>
-                "{recommendation.text}"
-              </blockquote>
+              <div>
+                <h3 class='font-semibold'>
+                  {recommendation.recommender.firstName + " " + recommendation.recommender.lastName}
+                </h3>
+                <p class='text-sm text-slate-600 dark:text-slate-400'>
+                  {recommendation.recommender.occupation}
+                </p>
+                <p class='text-xs text-slate-500 dark:text-slate-500'>
+                  {getLinkedinRelationship(
+                    recommendation.relationship,
+                    recommendation.recommender.firstName
+                  )}{" "}
+                  • {getDateFromTimestamp(recommendation.created)}
+                </p>
+              </div>
             </div>
-          </Card>
-        )
-      )
+            <blockquote class='text-slate-600 dark:text-slate-400 text-sm flex-grow'>
+              "{recommendation.text}"
+            </blockquote>
+          </div>
+        </Card>
+      ))
     }
+  </div>
+  <div class='flex flex-col justify-center items-center gap-4'>
+    <h3 class='text-md'>Did you work with me?</h3>
+    <Button
+      href='https://www.linkedin.com/in/dartiles/edit/forms/recommendation/write/?profileUrn=urn%3Ali%3Afsd_profile%3AACoAACB74ZsB6OQgEkROYEY4GUJCg7WdWYrroBs'
+      variant='primary'
+      target='_blank'
+      rel='noopener noreferrer'
+      class='group/button'
+    >
+      Leave a Recommendation
+      <Icon
+        name='linkedin2'
+        slot='icon'
+        class='w-4 h-4 group-hover/button:scale-110 transition-transform duration-200'
+      />
+    </Button>
   </div>
 </section>
