@@ -3,12 +3,12 @@ import { Image } from "astro:assets";
 import Card from "./ui/Card.astro";
 import Button from "./ui/Button.astro";
 import { Icon } from "astro-icon/components";
-import profileDataJSON from "../../public/recommendations.json";
-import type { LinkedInProfileData } from "../types/linkedin";
-import { getLinkedinRelationship } from "../utils/get-linkedin-relationship";
-import ProfilePlaceholder from "../assets/profile-placeholder.jpg";
+import linkedinProfileData from "@/src/assets/linkedin-profile-data.json";
+import type { LinkedInProfileData } from "@/src/types/linkedin";
+import { getLinkedinRelationship } from "@/src/utils/get-linkedin-relationship";
+import ProfilePlaceholder from "@/src/assets/profile-placeholder.jpg";
 
-const recommendations = profileDataJSON.data
+const recommendations = linkedinProfileData.data
   .receivedRecommendation as LinkedInProfileData["data"]["receivedRecommendation"];
 
 function getDateFromTimestamp(timestamp: number) {

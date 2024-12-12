@@ -1,8 +1,8 @@
-import { updateRecommendations } from './fetch-recommendations';
+import { updateLinkedinProfileData } from './fetch-linkedin-profile-data';
 
 async function prebuild() {
   console.log('Running prebuild tasks...');
-  await updateRecommendations();
+  await updateLinkedinProfileData();
   console.log('Prebuild tasks completed');
 }
 
