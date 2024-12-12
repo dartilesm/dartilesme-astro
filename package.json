@@ -7,7 +7,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "commit": "sui-mono commit"
+    "commit": "sui-mono commit",
+    "prebuild": "tsx scripts/prebuild.ts"
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.3",
