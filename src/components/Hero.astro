@@ -27,6 +27,8 @@ const socialLinks: SocialLink[] = [
     icon: "mail",
   },
 ];
+
+const yearsOfExperience = new Date().getFullYear() - 2017;
 ---
 
 <section class='py-16 sm:py-20'>
@@ -36,9 +38,9 @@ const socialLinks: SocialLink[] = [
       <h2 class='text-xl font-semibold text-indigo-600 dark:text-indigo-400'>Frontend Developer</h2>
       <p class='text-slate-600 dark:text-slate-400 max-w-prose'>
         Experienced Frontend Developer specializing in modern web technologies and performance
-        optimization. With 7+ years of hands-on experience building scalable applications using
-        React, Next.js, Vue, and Angular. Passionate about creating engaging user experiences
-        through interactive animations and efficient, maintainable code.
+        optimization. With {yearsOfExperience}+ years of hands-on experience building scalable
+        applications using React, Next.js, Vue, and Angular. Passionate about creating engaging user
+        experiences through interactive animations and efficient, maintainable code.
       </p>
       <ul class='flex'>
         {

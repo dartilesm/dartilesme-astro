@@ -5,6 +5,8 @@ import Tag from "@/src/components/ui/Tag.astro";
 import { Image } from "astro:assets";
 import MakefyProjectImg from "@/src/assets/makefy.jpeg";
 import BlogProjectImg from "@/src/assets/blog.jpeg";
+import AlexGitProjectImg from "@/src/assets/alexgit.png";
+import VueStitchesProjectImg from "@/src/assets/vue-stitches.webp";
 import { Icon } from "astro-icon/components";
 
 interface Project {
@@ -31,6 +33,24 @@ const projects: Project[] = [
     featured: true,
   },
   {
+    title: "AlexGit - A Virtual Git Assistant",
+    description:
+      "Alexgit is an AI virtual assistant designed to help with the day-to-day tasks of Git version control system.",
+    image: AlexGitProjectImg,
+    tags: ["CohereAI", "Node.js"],
+    githubUrl: "https://github.com/dartilesm/alexgit",
+    status: "completed",
+  },
+  {
+    title: "vue-stitches",
+    description:
+      "It is a small package that helps to better use Stitches in Vue projects. Stitches (at the time I'm writing this) only has an adapted version of React, so I'm using the core version to make this package.",
+    image: VueStitchesProjectImg,
+    tags: ["Vue", "Javascript"],
+    githubUrl: "https://github.com/dartilesm/vue-stitches",
+    status: "completed",
+  },
+  {
     title: "DartilesDev",
     description:
       "A personal blog platform built to share technical knowledge and insights about web development, focusing on modern frontend technologies and best practices.",
@@ -39,18 +59,18 @@ const projects: Project[] = [
     liveUrl: "https://dartiles.dev",
     githubUrl: "https://github.com/dartilesm/dartiles.dev",
     status: "completed",
-  }
+  },
 ];
 ---
 
 <section class='py-16'>
   <h2 class='text-2xl font-bold mb-8'>Featured Projects</h2>
-  <div class='grid grid-cols-1 gap-8 md:grid-cols-2'>
+  <div class='grid grid-cols-1 gap-8 md:grid-cols-3'>
     {
       projects.map((project) => (
         <Card
           variant={project.featured ? "background" : "default"}
-          class={project.featured ? "md:col-span-2 h-[500px]" : ""}
+          class={project.featured ? "md:col-span-3 h-[500px]" : ""}
         >
           {project.featured && (
               <Image
@@ -82,16 +102,16 @@ const projects: Project[] = [
                     <Tag class='bg-white/10 text-white'>{tag}</Tag>
                   ))}
                 </div>
-                <div class='flex gap-4'>
+                <div class='flex gap-4 flex-wrap'>
                   {project.liveUrl && (
                     <Button
                       href={project.liveUrl}
                       variant='primary'
                       target='_blank'
                       rel='noopener noreferrer'
-                      class='group/button'
+                      class='group/button flex-shrink-0'
                     >
-                      View Project
+                      Project
                       <Icon
                         name='external-link'
                         slot='icon'
@@ -104,9 +124,9 @@ const projects: Project[] = [
                     variant={project.liveUrl ? "ghost" : "primary"}
                     target='_blank'
                     rel='noopener noreferrer'
-                    class='text-white hover:text-white dark:hover:text-indigo-800 group/button'
+                    class='text-white hover:text-slate-800 dark:hover:text-indigo-800 group/button flex-shrink-0'
                   >
-                    View Code
+                    Code
                     <Icon
                         name='external-link'
                         slot='icon'
@@ -118,8 +138,8 @@ const projects: Project[] = [
           )}
           {!project.featured && (
               <Image src={project.image} alt={project.title} class='w-full h-60 object-cover' />
-              <div class='p-6 flex gap-2 flex-col'>
-                <div class='flex items-center gap-2'>
+              <div class='p-6 flex gap-2 flex-col items-between'>
+                <div class='flex items-between gap-2 '>
                   <h3 class='text-xl font-semibold'>{project.title}</h3>
                   {project.status === "in-progress" && (
                     <div class='flex items-center gap-2 pt-1'>
@@ -141,16 +161,16 @@ const projects: Project[] = [
                     <Tag>{tag}</Tag>
                   ))}
                 </div>
-                <div class='flex gap-4'>
+                <div class='flex gap-x-4 flex-wrap'>
                   {project.liveUrl && (
                     <Button
                       href={project.liveUrl}
                       variant='primary'
                       target='_blank'
                       rel='noopener noreferrer'
-                      class='group/button'
+                      class='group/button flex-shrink-0'
                     >
-                      View Project
+                      Project
                       <Icon
                         name='external-link'
                         slot='icon'
@@ -163,9 +183,9 @@ const projects: Project[] = [
                     variant={project.liveUrl ? "ghost" : "primary"}
                     target='_blank'
                     rel='noopener noreferrer'
-                    class='group/button'
+                    class='group/button flex-shrink-0'
                   >
-                    View Code
+                    Code
                     <Icon
                         name='external-link'
                         slot='icon'
