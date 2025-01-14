@@ -10,10 +10,7 @@ const { class: className = "", variant = "default" } = Astro.props;
 {
   variant === "default" ? (
     <article
-      class:list={[
-        "max-w-sm bg-white rounded-lg shadow dark:bg-indigo-950/50 overflow-hidden",
-        className,
-      ]}
+      class:list={["bg-white rounded-lg shadow dark:bg-indigo-950/50 overflow-hidden", className]}
     >
       <slot />
     </article>

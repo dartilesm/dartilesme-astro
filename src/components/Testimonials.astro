@@ -23,23 +23,17 @@ function getDateFromTimestamp(timestamp: number) {
   <div class='flex justify-between items-center mb-8'>
     <h2 class='text-2xl font-bold'>What people say about me</h2>
   </div>
-  <div
-    class='grid xs:grid-cols-1 sm:grid-cols-[repeat(2,_minmax(0,_max-content))] lg:grid-cols-3 gap-6 mb-8'
-  >
+  <div class='columns-1 gap-5 sm:columns-2 sm:gap-7 md:columns-2'>
     {
       recommendations.map((recommendation) => (
-        <Card class='h-full'>
+        <Card class='h-fit mb-5 sm:mb-7'>
           <div class='p-6 flex flex-col gap-4 h-full'>
             <div class='flex items-start gap-4'>
               <div class='flex-shrink-0 relative'>
                 {recommendation.recommender.profilePictures[0].url ? (
                   <Image
                     src={recommendation.recommender.profilePictures[0].url}
-                    alt={
-                      recommendation.recommender.firstName +
-                      " " +
-                      recommendation.recommender.lastName
-                    }
+                    alt={`${recommendation.recommender.firstName} ${recommendation.recommender.lastName}`}
                     width={48}
                     height={48}
                     class='rounded-full object-cover outline outline-2 dark:outline-slate-600 outline-slate-300 outline-offset-2'
@@ -47,11 +41,7 @@ function getDateFromTimestamp(timestamp: number) {
                 ) : (
                   <Image
                     src={ProfilePlaceholder}
-                    alt={
-                      recommendation.recommender.firstName +
-                      " " +
-                      recommendation.recommender.lastName
-                    }
+                    alt={`${recommendation.recommender.firstName} ${recommendation.recommender.lastName}`}
                     width={48}
                     height={48}
                     class='rounded-full object-cover outline outline-2 dark:outline-slate-600 outline-slate-300 outline-offset-2'
@@ -63,7 +53,7 @@ function getDateFromTimestamp(timestamp: number) {
               </div>
               <div>
                 <h3 class='font-semibold'>
-                  {recommendation.recommender.firstName + " " + recommendation.recommender.lastName}
+                  {recommendation.recommender.firstName} {recommendation.recommender.lastName}
                 </h3>
                 <p class='text-sm text-slate-600 dark:text-slate-400'>
                   {recommendation.recommender.occupation}
@@ -85,7 +75,7 @@ function getDateFromTimestamp(timestamp: number) {
       ))
     }
   </div>
-  <div class='flex flex-col justify-center items-center gap-4'>
+  <div class='flex flex-col justify-center items-center gap-4 mt-8'>
     <h3 class='text-md'>Did you work with me?</h3>
     <Button
       href='https://www.linkedin.com/in/dartiles/edit/forms/recommendation/write/?profileUrn=urn%3Ali%3Afsd_profile%3AACoAACB74ZsB6OQgEkROYEY4GUJCg7WdWYrroBs'
