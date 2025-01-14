@@ -55,10 +55,10 @@ function getDateFromTimestamp(timestamp: number) {
                 <h3 class='font-semibold'>
                   {recommendation.recommender.firstName} {recommendation.recommender.lastName}
                 </h3>
-                <p class='text-sm text-slate-600 dark:text-slate-400'>
+                <p class='text-sm text-slate-500 dark:text-slate-500 font-medium'>
                   {recommendation.recommender.occupation}
                 </p>
-                <p class='text-xs text-slate-500 dark:text-slate-500'>
+                <p class='text-xs text-slate-400 dark:text-slate-500 font-light'>
                   {getLinkedinRelationship(
                     recommendation.relationship,
                     recommendation.recommender.firstName
