@@ -17,5 +17,6 @@ export default defineConfig({
   },
   integrations: [tailwind(), icon({
     iconDir: 'src/assets/icons'
-  })]
+  })],
+  output: 'server'
 });
