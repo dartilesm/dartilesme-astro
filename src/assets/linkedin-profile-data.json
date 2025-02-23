@@ -1,5 +1,4 @@
 {
-  "lastFetched": "2025-01-14T20:27:50.247Z",
   "success": true,
   "message": "",
   "data": {
@@ -9,21 +8,44 @@
     "firstName": "Diego",
     "lastName": "Artiles",
     "isCreator": true,
-    "profilePicture": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1676499428583?e=1742428800&v=beta&t=dK6dGPzQrVitsFE-Mn_6Fl-8tLZ07YLAo4zw5c3V_ZU",
+    "isPremium": true,
+    "profilePicture": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1676499428583?e=1746057600\u0026v=beta\u0026t=U1pnuVHtWk32X3Baqz_Zo2ELVl-jnW5A1jMaZ9p1bOo",
+    "profilePictures": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1676499428583?e=1746057600\u0026v=beta\u0026t=2egPND5mMRHXNGMHG0q-4m69ZaNRMquWv5uLei6GLIk",
+        "width": 100,
+        "height": 100
+      },
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1676499428583?e=1746057600\u0026v=beta\u0026t=2KUgaDNVT3BrBylsOFRHQNW1E03uN-QoaprR1ubV3wQ",
+        "width": 200,
+        "height": 200
+      },
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1676499428583?e=1746057600\u0026v=beta\u0026t=W17asTBa3dQqy56CwfAAMUo1KwT9Pwwu-vyDqSP2SFo",
+        "width": 400,
+        "height": 400
+      },
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1676499428583?e=1746057600\u0026v=beta\u0026t=U1pnuVHtWk32X3Baqz_Zo2ELVl-jnW5A1jMaZ9p1bOo",
+        "width": 800,
+        "height": 800
+      }
+    ],
     "backgroundImage": [
       {
         "width": 800,
         "height": 200,
-        "url": "https://media.licdn.com/dms/image/v2/D4D16AQGU3_NYs8qclg/profile-displaybackgroundimage-shrink_200_800/profile-displaybackgroundimage-shrink_200_800/0/1733067055144?e=1742428800&v=beta&t=LT5RwQ0-_hdENCLVnHQbhs14AT12hh_aXAb3X9j78zM"
+        "url": "https://media.licdn.com/dms/image/v2/D4D16AQGU3_NYs8qclg/profile-displaybackgroundimage-shrink_200_800/profile-displaybackgroundimage-shrink_200_800/0/1733067055144?e=1746057600\u0026v=beta\u0026t=0z8yv1NAo5GPlv15uaEHuU0t1FE2oq02zquI7LntgNQ"
       },
       {
         "width": 1400,
         "height": 350,
-        "url": "https://media.licdn.com/dms/image/v2/D4D16AQGU3_NYs8qclg/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1733067055144?e=1742428800&v=beta&t=IM65Eb8-eZQSGuijGMgcqzN6UtZpubkjb9S4Jj0ObK0"
+        "url": "https://media.licdn.com/dms/image/v2/D4D16AQGU3_NYs8qclg/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1733067055144?e=1746057600\u0026v=beta\u0026t=MiiszkMxebQJJmJ2SNAhTb0Io1wbRwkXrQwPv9xrF2M"
       }
     ],
-    "summary": "Frontend Developer with over 7 years of experience working with modern technologies like React, Next.js, Vue, Angular, and web animations. \n\nExtensive expertise in building web applications, optimizing performance through server-side rendering, caching improvements, and implementing scalable solutions. \n\nSkilled in improving system efficiency, boosting user retention with interactive animations, and enhancing usability to deliver an excellent user experience. Knowledge working with Artificial Intelligence (AI).\n\nIf you are looking for someone creative, proactive, and capable of solving problems, you came to the right place.",
-    "headline": "Frontend Developer at DEPT® | React, Svelte, Vue, Angular",
+    "summary": "Frontend Developer with over 8 years of experience working with modern technologies such as React, Next.js, and Astro.\n\nExtensive expertise in building web applications, optimizing performance through server-side rendering, enhancing caching, and implementing scalable solutions.\n\nI possess a keen eye for detail in UX/UI design, ensuring a meticulous and well-thought-out user experience. I take pride in creating applications with high-quality user interfaces.\n\nCurrently, I am developing an AI-based application using Turborepo, Next.js, Shadcn, TailwindCSS, Supabase, and Vercel AI SDK.\n\nIf you are looking for someone creative, proactive, and adept at solving problems, you have come to the right place.",
+    "headline": "Frontend Developer at DEPT® | React, NextJS, Astro, AI",
     "geo": {
       "country": "Argentina",
       "city": "Buenos Aires, Buenos Aires Province",
@@ -59,7 +81,24 @@
         "description": "Cursos de programación, diseño, marketing, desarrollo web, Frontend, Backend, Desarrollo Móvil, UX, Usabilidad.",
         "activities": "Angular, Javascript, Reactjs, Ionic, Jquery",
         "url": "https://www.linkedin.com/school/platzi-inc/",
-        "schoolId": "2822346"
+        "schoolId": "2822346",
+        "logo": [
+          {
+            "url": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1748476800\u0026v=beta\u0026t=PypSkPBQfnvScJM8cYXEe8TH_P-krBL6uDaPjPs1CWg",
+            "width": 200,
+            "height": 200
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_100_100/company-logo_100_100/0/1677870818259/platzi_inc_logo?e=1748476800\u0026v=beta\u0026t=qNHc3ZQo59-zd6d27pbwnsa46Osxv51ogmX95dUSrxw",
+            "width": 100,
+            "height": 100
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_400_400/company-logo_400_400/0/1677870818259/platzi_inc_logo?e=1748476800\u0026v=beta\u0026t=kW2yN_wEleeU9mT6RWaIkg1bfibffMYDzeeKcYlaq1k",
+            "width": 400,
+            "height": 400
+          }
+        ]
       },
       {
         "start": {
@@ -79,7 +118,24 @@
         "description": "Estudiante de Computación, Universidad de Carabobo. ",
         "activities": "Calculo, Matemática Discreta, Desarrollo de Habilidades Directivas, Algoritmo...",
         "url": "https://www.linkedin.com/school/universidad-de-carabobo/",
-        "schoolId": "377097"
+        "schoolId": "377097",
+        "logo": [
+          {
+            "url": "https://media.licdn.com/dms/image/v2/C560BAQEOt8UVYeNCzw/company-logo_200_200/company-logo_200_200/0/1631335818119?e=1748476800\u0026v=beta\u0026t=3-DHPVYGAoG1u_bINpE2LAz70UUtVSlfyoRFUqi7B6k",
+            "width": 200,
+            "height": 200
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/C560BAQEOt8UVYeNCzw/company-logo_100_100/company-logo_100_100/0/1631335818119?e=1748476800\u0026v=beta\u0026t=l6E0aQCrJO52hTb9smt0OA36Ityzm8Y_YcjLFEPeKzc",
+            "width": 100,
+            "height": 100
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/C560BAQEOt8UVYeNCzw/company-logo_400_400/company-logo_400_400/0/1631335818119?e=1748476800\u0026v=beta\u0026t=XthXQESeDhJFg040hOYD5fmgtmiH2Cpz6mNDMRwfigs",
+            "width": 400,
+            "height": 400
+          }
+        ]
       }
     ],
     "position": [
@@ -88,8 +144,8 @@
         "companyName": "DEPT®",
         "companyUsername": "deptagency",
         "companyURL": "https://www.linkedin.com/company/deptagency/",
-        "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQGjY47rng2M9Q/company-logo_400_400/company-logo_400_400/0/1649344264503/deptagency_logo?e=1744848000&v=beta&t=nf48y8LrFXY4ruiwrnCne3DUCoD_RY09Ibkc55XGkpA",
-        "companyIndustry": "Marketing & Advertising",
+        "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQGjY47rng2M9Q/company-logo_400_400/company-logo_400_400/0/1649344264503/deptagency_logo?e=1748476800\u0026v=beta\u0026t=1eGAVZzCAlU5emj3xj6e2qEnJ37y3NM4LnFe-Q7lk-I",
+        "companyIndustry": "Marketing \u0026 Advertising",
         "companyStaffCountRange": "1001 - 5000",
         "title": "Frontend Developer",
         "multiLocaleTitle": {
@@ -117,7 +173,7 @@
         "companyName": "Coco Pago",
         "companyUsername": "cocopago",
         "companyURL": "https://www.linkedin.com/company/cocopago/",
-        "companyLogo": "https://media.licdn.com/dms/image/v2/D4E0BAQGOEQ4U-i_9_A/company-logo_400_400/company-logo_400_400/0/1687962234300/cocopago_logo?e=1744848000&v=beta&t=5A_AE4_uwRuoW044pvSyKMT48MzHw-TVcN7apRqo3Js",
+        "companyLogo": "https://media.licdn.com/dms/image/v2/D4E0BAQGOEQ4U-i_9_A/company-logo_400_400/company-logo_400_400/0/1687962234300/cocopago_logo?e=1748476800\u0026v=beta\u0026t=C7RFyJHqUVpoiw4TVvuLpV7VUVVNr0mauSICDxmRKJw",
         "companyIndustry": "Internet",
         "companyStaffCountRange": "51 - 200",
         "title": "Frontend Developer",
@@ -146,8 +202,8 @@
         "companyName": "Santander Tecnología",
         "companyUsername": "santander-tyo",
         "companyURL": "https://www.linkedin.com/company/santander-tyo/",
-        "companyLogo": "https://media.licdn.com/dms/image/v2/C560BAQGReBZshbYyAQ/company-logo_400_400/company-logo_400_400/0/1630656208102/santander_tyo_logo?e=1744848000&v=beta&t=SF7i-HJa7olmS06dX3q5KNT00lVlGHr0f42Ak7ZSiEM",
-        "companyIndustry": "Information Technology & Services",
+        "companyLogo": "https://media.licdn.com/dms/image/v2/C560BAQGReBZshbYyAQ/company-logo_400_400/company-logo_400_400/0/1630656208102/santander_tyo_logo?e=1748476800\u0026v=beta\u0026t=kgYWNjMfk5tKv06fjve5VZzeYGnOYEthHMtYfBK25ZM",
+        "companyIndustry": "Information Technology \u0026 Services",
         "companyStaffCountRange": "1001 - 5000",
         "title": "Frontend Developer",
         "multiLocaleTitle": {
@@ -204,8 +260,8 @@
         "companyName": "Lagash",
         "companyUsername": "lagash",
         "companyURL": "https://www.linkedin.com/company/lagash/",
-        "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQFKlZMp9bKM9w/company-logo_400_400/company-logo_400_400/0/1631337416966?e=1744848000&v=beta&t=v7g38Ievb2KxUIeVtmVFKm3N47E8cv0K6OqOtxFqFnM",
-        "companyIndustry": "Information Technology & Services",
+        "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQFKlZMp9bKM9w/company-logo_400_400/company-logo_400_400/0/1631337416966?e=1748476800\u0026v=beta\u0026t=jzOUVnqxs8o6G0KA_qbVSfGqUhemmT3hRB80t4-0zwI",
+        "companyIndustry": "Information Technology \u0026 Services",
         "companyStaffCountRange": "201 - 500",
         "title": "Frontend Developer",
         "multiLocaleTitle": {
@@ -233,7 +289,7 @@
         "companyName": "Grupo Nepuntobiz, CA",
         "companyUsername": "nepuntobiz",
         "companyURL": "https://www.linkedin.com/company/nepuntobiz/",
-        "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQG6VMrcRKd-yg/company-logo_400_400/company-logo_400_400/0/1631344357146?e=1744848000&v=beta&t=8PQ8somu52XIxkveilgj1OD_MDRRL0THXLa0LgfEaH8",
+        "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQG6VMrcRKd-yg/company-logo_400_400/company-logo_400_400/0/1631344357146?e=1748476800\u0026v=beta\u0026t=gVj-8hqEXqNp7lCMOImQn11IgMcCCYv9RaAuyw42BQw",
         "companyIndustry": "Internet",
         "companyStaffCountRange": "11 - 50",
         "title": "Frontend Developer",
@@ -264,8 +320,8 @@
         "companyName": "DEPT®",
         "companyUsername": "deptagency",
         "companyURL": "https://www.linkedin.com/company/deptagency/",
-        "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQGjY47rng2M9Q/company-logo_400_400/company-logo_400_400/0/1649344264503/deptagency_logo?e=1744848000&v=beta&t=nf48y8LrFXY4ruiwrnCne3DUCoD_RY09Ibkc55XGkpA",
-        "companyIndustry": "Marketing & Advertising",
+        "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQGjY47rng2M9Q/company-logo_400_400/company-logo_400_400/0/1649344264503/deptagency_logo?e=1748476800\u0026v=beta\u0026t=1eGAVZzCAlU5emj3xj6e2qEnJ37y3NM4LnFe-Q7lk-I",
+        "companyIndustry": "Marketing \u0026 Advertising",
         "companyStaffCountRange": "1001 - 5000",
         "title": "Frontend Developer",
         "multiLocaleTitle": {
@@ -293,7 +349,7 @@
         "companyName": "Coco Pago",
         "companyUsername": "cocopago",
         "companyURL": "https://www.linkedin.com/company/cocopago/",
-        "companyLogo": "https://media.licdn.com/dms/image/v2/D4E0BAQGOEQ4U-i_9_A/company-logo_400_400/company-logo_400_400/0/1687962234300/cocopago_logo?e=1744848000&v=beta&t=5A_AE4_uwRuoW044pvSyKMT48MzHw-TVcN7apRqo3Js",
+        "companyLogo": "https://media.licdn.com/dms/image/v2/D4E0BAQGOEQ4U-i_9_A/company-logo_400_400/company-logo_400_400/0/1687962234300/cocopago_logo?e=1748476800\u0026v=beta\u0026t=C7RFyJHqUVpoiw4TVvuLpV7VUVVNr0mauSICDxmRKJw",
         "companyIndustry": "Internet",
         "companyStaffCountRange": "51 - 200",
         "title": "Frontend Developer",
@@ -322,8 +378,8 @@
         "companyName": "Santander Tecnología",
         "companyUsername": "santander-tyo",
         "companyURL": "https://www.linkedin.com/company/santander-tyo/",
-        "companyLogo": "https://media.licdn.com/dms/image/v2/C560BAQGReBZshbYyAQ/company-logo_400_400/company-logo_400_400/0/1630656208102/santander_tyo_logo?e=1744848000&v=beta&t=SF7i-HJa7olmS06dX3q5KNT00lVlGHr0f42Ak7ZSiEM",
-        "companyIndustry": "Information Technology & Services",
+        "companyLogo": "https://media.licdn.com/dms/image/v2/C560BAQGReBZshbYyAQ/company-logo_400_400/company-logo_400_400/0/1630656208102/santander_tyo_logo?e=1748476800\u0026v=beta\u0026t=kgYWNjMfk5tKv06fjve5VZzeYGnOYEthHMtYfBK25ZM",
+        "companyIndustry": "Information Technology \u0026 Services",
         "companyStaffCountRange": "1001 - 5000",
         "title": "Frontend Developer",
         "multiLocaleTitle": {
@@ -380,8 +436,8 @@
         "companyName": "Lagash",
         "companyUsername": "lagash",
         "companyURL": "https://www.linkedin.com/company/lagash/",
-        "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQFKlZMp9bKM9w/company-logo_400_400/company-logo_400_400/0/1631337416966?e=1744848000&v=beta&t=v7g38Ievb2KxUIeVtmVFKm3N47E8cv0K6OqOtxFqFnM",
-        "companyIndustry": "Information Technology & Services",
+        "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQFKlZMp9bKM9w/company-logo_400_400/company-logo_400_400/0/1631337416966?e=1748476800\u0026v=beta\u0026t=jzOUVnqxs8o6G0KA_qbVSfGqUhemmT3hRB80t4-0zwI",
+        "companyIndustry": "Information Technology \u0026 Services",
         "companyStaffCountRange": "201 - 500",
         "title": "Frontend Developer",
         "multiLocaleTitle": {
@@ -409,7 +465,7 @@
         "companyName": "Grupo Nepuntobiz, CA",
         "companyUsername": "nepuntobiz",
         "companyURL": "https://www.linkedin.com/company/nepuntobiz/",
-        "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQG6VMrcRKd-yg/company-logo_400_400/company-logo_400_400/0/1631344357146?e=1744848000&v=beta&t=8PQ8somu52XIxkveilgj1OD_MDRRL0THXLa0LgfEaH8",
+        "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQG6VMrcRKd-yg/company-logo_400_400/company-logo_400_400/0/1631344357146?e=1748476800\u0026v=beta\u0026t=gVj-8hqEXqNp7lCMOImQn11IgMcCCYv9RaAuyw42BQw",
         "companyIndustry": "Internet",
         "companyStaffCountRange": "11 - 50",
         "title": "Frontend Developer",
@@ -665,24 +721,24 @@
           "username": "juan-guillermo-rozo",
           "profilePictures": [
             {
-              "width": 100,
-              "height": 100,
-              "url": "https://media.licdn.com/dms/image/v2/D4E03AQF2SJl1zZS2lg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1715278144063?e=1742428800&v=beta&t=soExM-f-UVev7NTPqzasVInhNbibIQuQwEnVE10l40I"
+              "width": 400,
+              "height": 400,
+              "url": "https://media.licdn.com/dms/image/v2/D4E35AQFgE1ENBxBtOg/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1737504009831?e=1740956400\u0026v=beta\u0026t=H2LZq5Bhffr6cuF6Qav6Pr_-kLJRT3ARtZn1K3x-xVg"
             },
             {
               "width": 200,
               "height": 200,
-              "url": "https://media.licdn.com/dms/image/v2/D4E03AQF2SJl1zZS2lg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1715278144063?e=1742428800&v=beta&t=yyijRrimG4PB7E0KZzPOp-fts7taGZEC9SlfRrFMhoM"
-            },
-            {
-              "width": 400,
-              "height": 400,
-              "url": "https://media.licdn.com/dms/image/v2/D4E03AQF2SJl1zZS2lg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1715278144063?e=1742428800&v=beta&t=qMx-JUfs0Vh3gsS7hnJV-3TlCQzTTRFUnVInrW1RHTg"
+              "url": "https://media.licdn.com/dms/image/v2/D4E35AQFgE1ENBxBtOg/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1737504009831?e=1740956400\u0026v=beta\u0026t=XHbT5SVgWs8RwIdWwlOWhb8awJesufDRKN_FQ9oUutw"
             },
             {
               "width": 800,
               "height": 800,
-              "url": "https://media.licdn.com/dms/image/v2/D4E03AQF2SJl1zZS2lg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1715278144063?e=1742428800&v=beta&t=jPJnADZJWG5WsOzOOkPYzXElNJ1OLS3GUdq3RD5zyz0"
+              "url": "https://media.licdn.com/dms/image/v2/D4E35AQFgE1ENBxBtOg/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1737504009831?e=1740956400\u0026v=beta\u0026t=hNXL7jqtAQR5rBOcf5RiPmv70m17dsk8tluOPqCdy24"
+            },
+            {
+              "width": 100,
+              "height": 100,
+              "url": "https://media.licdn.com/dms/image/v2/D4E35AQFgE1ENBxBtOg/profile-framedphoto-shrink_100_100/profile-framedphoto-shrink_100_100/0/1737504009767?e=1740956400\u0026v=beta\u0026t=25cOZ2-wHB78rJxohLbJ4QJRDpqxDFeWmSvu5xHVnx8"
             }
           ]
         }
@@ -695,28 +751,28 @@
         "recommendee": {
           "firstName": "Juan Martin",
           "lastName": "Gimenez Yunis",
-          "occupation": "Senior Frontend Developer | React & NextJs",
+          "occupation": "Senior Frontend Developer | React \u0026 NextJs",
           "username": "ann0nip",
           "profilePictures": [
             {
               "width": 100,
               "height": 100,
-              "url": "https://media.licdn.com/dms/image/v2/D4D03AQHNEN6wnWOWKQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1690954489254?e=1742428800&v=beta&t=YeUq-m8YybFk50qGVP8MjFN5am--Yiphv78Y00N2GtQ"
+              "url": "https://media.licdn.com/dms/image/v2/D4D03AQHNEN6wnWOWKQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1690954489254?e=1746057600\u0026v=beta\u0026t=l_XrsSeC7wZe_OjqwWnBnPlZrnfz4y-eWuUH6JwMVOM"
             },
             {
               "width": 200,
               "height": 200,
-              "url": "https://media.licdn.com/dms/image/v2/D4D03AQHNEN6wnWOWKQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1690954489254?e=1742428800&v=beta&t=D9lPH1q9PK60bC3sh9DhFNW9gHi2s5s1d9aZ-EuTIuY"
+              "url": "https://media.licdn.com/dms/image/v2/D4D03AQHNEN6wnWOWKQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1690954489254?e=1746057600\u0026v=beta\u0026t=w1h2zjN10XJIsCiZhKcMMQPCYQNlxgP4EM6Gk-HezgY"
             },
             {
               "width": 400,
               "height": 400,
-              "url": "https://media.licdn.com/dms/image/v2/D4D03AQHNEN6wnWOWKQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1690954489254?e=1742428800&v=beta&t=p-WAWDaxMSFfcDu7uLRsemn8z8TGGEfMJFGmcIAv4oQ"
+              "url": "https://media.licdn.com/dms/image/v2/D4D03AQHNEN6wnWOWKQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1690954489254?e=1746057600\u0026v=beta\u0026t=lPjtoDd6TaVwFwJXQPmOMuA0Fs1BowNANJE4ioVp6UI"
             },
             {
               "width": 800,
               "height": 800,
-              "url": "https://media.licdn.com/dms/image/v2/D4D03AQHNEN6wnWOWKQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1690954489254?e=1742428800&v=beta&t=6psiK3KoM6ieb4DE7-Tp8nvuWgiP3J0T2vH2nzm-PMs"
+              "url": "https://media.licdn.com/dms/image/v2/D4D03AQHNEN6wnWOWKQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1690954489254?e=1746057600\u0026v=beta\u0026t=SqNS6z69MPPEsC_MYq8K_5hHdqqbfsBjbWW2PRyt3A4"
             }
           ]
         }
@@ -729,7 +785,7 @@
         "recommendee": {
           "firstName": "Vickler",
           "lastName": "Charles",
-          "occupation": "Software Engineer | Web3 & Smart Contract Specialist | Building dApps on EVM",
+          "occupation": "AI \u0026 DeFi/Smart Contracts Engineer | Building Intelligent dApps on EVM",
           "username": "vicklercharles"
         }
       },
@@ -747,22 +803,22 @@
             {
               "width": 100,
               "height": 100,
-              "url": "https://media.licdn.com/dms/image/v2/D4D03AQHigBNGVqRnOA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1723639491706?e=1742428800&v=beta&t=rTKFF0WvKy7femb2Ru2G8dCW98WkjxsMc8jYtFHLaYc"
+              "url": "https://media.licdn.com/dms/image/v2/D4D03AQHigBNGVqRnOA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1723639491706?e=1746057600\u0026v=beta\u0026t=5ZIujCLOuYCHpkMSsIs1bCnoDxSCZ5azIvf2tHuEeb4"
             },
             {
               "width": 200,
               "height": 200,
-              "url": "https://media.licdn.com/dms/image/v2/D4D03AQHigBNGVqRnOA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1723639491706?e=1742428800&v=beta&t=8IPJRluQjc7W_Nw4xoW7__juttG0RgrGQhH2MelEA8A"
+              "url": "https://media.licdn.com/dms/image/v2/D4D03AQHigBNGVqRnOA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1723639491706?e=1746057600\u0026v=beta\u0026t=9LGWl9ShMq2lDU4nqalSEdaoRebIiHjL5OsVnBOi190"
             },
             {
               "width": 400,
               "height": 400,
-              "url": "https://media.licdn.com/dms/image/v2/D4D03AQHigBNGVqRnOA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1723639491706?e=1742428800&v=beta&t=GFhO8w3CZ_vzrv8TFm9bsclEhIM4BAAYUY9BBAj2v_k"
+              "url": "https://media.licdn.com/dms/image/v2/D4D03AQHigBNGVqRnOA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1723639491706?e=1746057600\u0026v=beta\u0026t=ub4qnOEXwkXsU4qaaYXUD0jP7aDbr2XdALK7_ulh2DQ"
             },
             {
               "width": 800,
               "height": 800,
-              "url": "https://media.licdn.com/dms/image/v2/D4D03AQHigBNGVqRnOA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1723639491740?e=1742428800&v=beta&t=N6IhSkFvnp24XAqN17uK5vnIihODRku7O9egOeSk-nU"
+              "url": "https://media.licdn.com/dms/image/v2/D4D03AQHigBNGVqRnOA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1723639491740?e=1746057600\u0026v=beta\u0026t=WPWD3TAbK0yKnzfwVE9YcN7AoB9gOXOs5j0Ae_Lk-EU"
             }
           ]
         }
@@ -781,22 +837,22 @@
             {
               "width": 100,
               "height": 100,
-              "url": "https://media.licdn.com/dms/image/v2/C4D03AQFEz0j9NIAE4w/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1651118238796?e=1742428800&v=beta&t=QMe5XMQuO95uC_hA0sRrKyN5Qs434ZUnP2Z4g0EirRw"
+              "url": "https://media.licdn.com/dms/image/v2/C4D03AQFEz0j9NIAE4w/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1651118238796?e=1746057600\u0026v=beta\u0026t=TZ7sMEOxPaYIc3rz8hW4wqxkfEAb6yXdvd-1xHimmyo"
             },
             {
               "width": 200,
               "height": 200,
-              "url": "https://media.licdn.com/dms/image/v2/C4D03AQFEz0j9NIAE4w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1651118238796?e=1742428800&v=beta&t=W4DjuewrrYmHDWO0jSpyelW5IxG93JIGC8gVzdXmCtU"
+              "url": "https://media.licdn.com/dms/image/v2/C4D03AQFEz0j9NIAE4w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1651118238796?e=1746057600\u0026v=beta\u0026t=bw5I35T6yuZkeGA9cLE0udKbqSw4RtUWO8v1PyO9INs"
             },
             {
               "width": 400,
               "height": 400,
-              "url": "https://media.licdn.com/dms/image/v2/C4D03AQFEz0j9NIAE4w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1651118238796?e=1742428800&v=beta&t=XUoyiv8UEae18UCtiRy-LDmvk46qQMTGvCupOmEr2cA"
+              "url": "https://media.licdn.com/dms/image/v2/C4D03AQFEz0j9NIAE4w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1651118238796?e=1746057600\u0026v=beta\u0026t=iZyA0SVn37NyRoPoMTmRu_nbscgWCe2rhkNnFaYlK50"
             },
             {
               "width": 800,
               "height": 800,
-              "url": "https://media.licdn.com/dms/image/v2/C4D03AQFEz0j9NIAE4w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1651118238796?e=1742428800&v=beta&t=iI8ZHj7NQOYq60wdz9xPJTCdz3Z25zIZt51M-_Gevlw"
+              "url": "https://media.licdn.com/dms/image/v2/C4D03AQFEz0j9NIAE4w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1651118238796?e=1746057600\u0026v=beta\u0026t=jurOAnBYFwYMvp37lC_WZblsspFFY964S9-1-bGhHSk"
             }
           ]
         }
@@ -804,6 +860,40 @@
     ],
     "givenRecommendationCount": 5,
     "receivedRecommendation": [
+      {
+        "text": "Diego was an incredible addition to our product development team. He excels at clear communication and documentation, he gives and receives feedback openly and graciously, and he cares immensely about the work that he delivers. I would work with Diego again in a heartbeat!",
+        "created": 1740169056000,
+        "lastModified": 1740184183000,
+        "relationship": "RECOMMENDER_IS_CLIENT_OF_RECOMMENDEE",
+        "recommender": {
+          "firstName": "Elizabeth",
+          "lastName": "Muniz",
+          "occupation": "Technical Program Manager at Shell Recharge Solutions",
+          "username": "evbmuniz",
+          "profilePictures": [
+            {
+              "width": 100,
+              "height": 100,
+              "url": "https://media.licdn.com/dms/image/v2/D5603AQGJTmn32MO5lg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1716400387316?e=1746057600&v=beta&t=k9NcJTXpHi_IyKmXCfEZgtTk9KWdrE-TosTBtJ0cxAA"
+            },
+            {
+              "width": 200,
+              "height": 200,
+              "url": "https://media.licdn.com/dms/image/v2/D5603AQGJTmn32MO5lg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1716400387316?e=1746057600&v=beta&t=k9NcJTXpHi_IyKmXCfEZgtTk9KWdrE-TosTBtJ0cxAA"
+            },
+            {
+              "width": 400,
+              "height": 400,
+              "url": "https://media.licdn.com/dms/image/v2/D5603AQGJTmn32MO5lg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1716400387316?e=1746057600&v=beta&t=k9NcJTXpHi_IyKmXCfEZgtTk9KWdrE-TosTBtJ0cxAA"
+            },
+            {
+              "width": 800,
+              "height": 800,
+              "url": "https://media.licdn.com/dms/image/v2/D5603AQGJTmn32MO5lg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1716400387316?e=1746057600&v=beta&t=k9NcJTXpHi_IyKmXCfEZgtTk9KWdrE-TosTBtJ0cxAA"
+            }
+          ]
+        }
+      },
       {
         "text": "I had the pleasure of working with and managing Diego for about two years. My team needed a skilled React engineer to help us ship a lot of new features and parity work for a large platform at Volta/SRS. Diego was an absolutely incredible fit for our team, and a very talented software engineer to boot. Diego has the very important skill of being able to follow when required, and to lead and take initiative when required. This helped us grow our codebase and product in a clean and sustainable way, and with very minimal tech debt. Diego found the right balance here; he was able to follow the existing patterns and best practices we had established, but also took the initiative to suggest new features, libraries and architecture patterns when he thought it was a good idea. And it turns out, they were all good ideas! So we implemented as many of his feature ideas concepts as we could, and the product, and tech team, are better off as a result. I'm excited for what's next in Diego's career, he will be a great asset to any team lucky enough to have him.",
         "created": 1736802842000,
@@ -818,22 +908,22 @@
             {
               "width": 100,
               "height": 100,
-              "url": "https://media.licdn.com/dms/image/v2/D5603AQE9wovJ8dYsCw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1693935230455?e=1742428800&v=beta&t=RU-NCHZNrbKc9Ij1ktXednY8A8am66xpOlGen7ct-8M"
+              "url": "https://media.licdn.com/dms/image/v2/D5603AQE9wovJ8dYsCw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1693935230455?e=1746057600&v=beta&t=vEKymZOxXSETGN8kB_b3w5WTSEGdO9_3P8JI8onZRb4"
             },
             {
               "width": 200,
               "height": 200,
-              "url": "https://media.licdn.com/dms/image/v2/D5603AQE9wovJ8dYsCw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1693935230455?e=1742428800&v=beta&t=RU-NCHZNrbKc9Ij1ktXednY8A8am66xpOlGen7ct-8M"
+              "url": "https://media.licdn.com/dms/image/v2/D5603AQE9wovJ8dYsCw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1693935230455?e=1746057600&v=beta&t=vEKymZOxXSETGN8kB_b3w5WTSEGdO9_3P8JI8onZRb4"
             },
             {
               "width": 400,
               "height": 400,
-              "url": "https://media.licdn.com/dms/image/v2/D5603AQE9wovJ8dYsCw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1693935230455?e=1742428800&v=beta&t=RU-NCHZNrbKc9Ij1ktXednY8A8am66xpOlGen7ct-8M"
+              "url": "https://media.licdn.com/dms/image/v2/D5603AQE9wovJ8dYsCw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1693935230455?e=1746057600&v=beta&t=vEKymZOxXSETGN8kB_b3w5WTSEGdO9_3P8JI8onZRb4"
             },
             {
               "width": 800,
               "height": 800,
-              "url": "https://media.licdn.com/dms/image/v2/D5603AQE9wovJ8dYsCw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1693935230455?e=1742428800&v=beta&t=RU-NCHZNrbKc9Ij1ktXednY8A8am66xpOlGen7ct-8M"
+              "url": "https://media.licdn.com/dms/image/v2/D5603AQE9wovJ8dYsCw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1693935230455?e=1746057600&v=beta&t=vEKymZOxXSETGN8kB_b3w5WTSEGdO9_3P8JI8onZRb4"
             }
           ]
         }
@@ -846,28 +936,28 @@
         "recommender": {
           "firstName": "Juan Martin",
           "lastName": "Gimenez Yunis",
-          "occupation": "Senior Frontend Developer | React & NextJs",
+          "occupation": "Senior Frontend Developer | React \u0026 NextJs",
           "username": "ann0nip",
           "profilePictures": [
             {
               "width": 100,
               "height": 100,
-              "url": "https://media.licdn.com/dms/image/v2/D4D03AQHNEN6wnWOWKQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1690954489254?e=1739404800&v=beta&t=IorPGu3XCowjsuJuH2CfZMmLy3K9t5aF7XeNwT2hRUQ"
+              "url": "https://media.licdn.com/dms/image/v2/D4D03AQHNEN6wnWOWKQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1690954489254?e=1746057600&v=beta&t=SqNS6z69MPPEsC_MYq8K_5hHdqqbfsBjbWW2PRyt3A4"
             },
             {
               "width": 200,
               "height": 200,
-              "url": "https://media.licdn.com/dms/image/v2/D4D03AQHNEN6wnWOWKQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1690954489254?e=1739404800&v=beta&t=IorPGu3XCowjsuJuH2CfZMmLy3K9t5aF7XeNwT2hRUQ"
+              "url": "https://media.licdn.com/dms/image/v2/D4D03AQHNEN6wnWOWKQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1690954489254?e=1746057600&v=beta&t=SqNS6z69MPPEsC_MYq8K_5hHdqqbfsBjbWW2PRyt3A4"
             },
             {
               "width": 400,
               "height": 400,
-              "url": "https://media.licdn.com/dms/image/v2/D4D03AQHNEN6wnWOWKQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1690954489254?e=1739404800&v=beta&t=IorPGu3XCowjsuJuH2CfZMmLy3K9t5aF7XeNwT2hRUQ"
+              "url": "https://media.licdn.com/dms/image/v2/D4D03AQHNEN6wnWOWKQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1690954489254?e=1746057600&v=beta&t=SqNS6z69MPPEsC_MYq8K_5hHdqqbfsBjbWW2PRyt3A4"
             },
             {
               "width": 800,
               "height": 800,
-              "url": "https://media.licdn.com/dms/image/v2/D4D03AQHNEN6wnWOWKQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1690954489254?e=1739404800&v=beta&t=IorPGu3XCowjsuJuH2CfZMmLy3K9t5aF7XeNwT2hRUQ"
+              "url": "https://media.licdn.com/dms/image/v2/D4D03AQHNEN6wnWOWKQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1690954489254?e=1746057600&v=beta&t=SqNS6z69MPPEsC_MYq8K_5hHdqqbfsBjbWW2PRyt3A4"
             }
           ]
         }
@@ -880,28 +970,28 @@
         "recommender": {
           "firstName": "Vickler",
           "lastName": "Charles",
-          "occupation": "Software Engineer | Web3 & Smart Contract Specialist | Building dApps on EVM",
+          "occupation": "AI \u0026 DeFi/Smart Contracts Engineer | Building Intelligent dApps on EVM",
           "username": "vicklercharles",
           "profilePictures": [
             {
               "width": 100,
               "height": 100,
-              "url": "https://media.licdn.com/dms/image/v2/D4E03AQEHQKQuFtO8lw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1720793960107?e=1739404800&v=beta&t=mmu9qUzESDZZ5cgVYZe7QpB8nnnGcXQwihA1sOZbUbg"
+              "url": "https://media.licdn.com/dms/image/v2/D4E03AQEHQKQuFtO8lw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1720793960107?e=1746057600&v=beta&t=JE5XQWYSWOZw0ZpSbfsYz6htqmTyk0wTc8eJJM4nvPk"
             },
             {
               "width": 200,
               "height": 200,
-              "url": "https://media.licdn.com/dms/image/v2/D4E03AQEHQKQuFtO8lw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1720793960107?e=1739404800&v=beta&t=mmu9qUzESDZZ5cgVYZe7QpB8nnnGcXQwihA1sOZbUbg"
+              "url": "https://media.licdn.com/dms/image/v2/D4E03AQEHQKQuFtO8lw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1720793960107?e=1746057600&v=beta&t=JE5XQWYSWOZw0ZpSbfsYz6htqmTyk0wTc8eJJM4nvPk"
             },
             {
               "width": 400,
               "height": 400,
-              "url": "https://media.licdn.com/dms/image/v2/D4E03AQEHQKQuFtO8lw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720793960107?e=1739404800&v=beta&t=mmu9qUzESDZZ5cgVYZe7QpB8nnnGcXQwihA1sOZbUbg"
+              "url": "https://media.licdn.com/dms/image/v2/D4E03AQEHQKQuFtO8lw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1720793960107?e=1746057600&v=beta&t=JE5XQWYSWOZw0ZpSbfsYz6htqmTyk0wTc8eJJM4nvPk"
             },
             {
               "width": 800,
               "height": 800,
-              "url": "https://media.licdn.com/dms/image/v2/D4E03AQEHQKQuFtO8lw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720793960107?e=1739404800&v=beta&t=mmu9qUzESDZZ5cgVYZe7QpB8nnnGcXQwihA1sOZbUbg"
+              "url": "https://media.licdn.com/dms/image/v2/D4E03AQEHQKQuFtO8lw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1720793960107?e=1746057600&v=beta&t=JE5XQWYSWOZw0ZpSbfsYz6htqmTyk0wTc8eJJM4nvPk"
             }
           ]
         }
@@ -920,28 +1010,28 @@
             {
               "width": 100,
               "height": 100,
-              "url": "https://media.licdn.com/dms/image/v2/C4D03AQFEz0j9NIAE4w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1651118238796?e=1739404800&v=beta&t=3ytffqgWWM_mVbITGzqmWNtlgcS2QCae5RhscTYICoo"
+              "url": "https://media.licdn.com/dms/image/v2/C4D03AQFEz0j9NIAE4w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1651118238796?e=1746057600&v=beta&t=jurOAnBYFwYMvp37lC_WZblsspFFY964S9-1-bGhHSk"
             },
             {
               "width": 200,
               "height": 200,
-              "url": "https://media.licdn.com/dms/image/v2/C4D03AQFEz0j9NIAE4w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1651118238796?e=1739404800&v=beta&t=3ytffqgWWM_mVbITGzqmWNtlgcS2QCae5RhscTYICoo"
+              "url": "https://media.licdn.com/dms/image/v2/C4D03AQFEz0j9NIAE4w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1651118238796?e=1746057600&v=beta&t=jurOAnBYFwYMvp37lC_WZblsspFFY964S9-1-bGhHSk"
             },
             {
               "width": 400,
               "height": 400,
-              "url": "https://media.licdn.com/dms/image/v2/C4D03AQFEz0j9NIAE4w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1651118238796?e=1739404800&v=beta&t=3ytffqgWWM_mVbITGzqmWNtlgcS2QCae5RhscTYICoo"
+              "url": "https://media.licdn.com/dms/image/v2/C4D03AQFEz0j9NIAE4w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1651118238796?e=1746057600&v=beta&t=jurOAnBYFwYMvp37lC_WZblsspFFY964S9-1-bGhHSk"
             },
             {
               "width": 800,
               "height": 800,
-              "url": "https://media.licdn.com/dms/image/v2/C4D03AQFEz0j9NIAE4w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1651118238796?e=1739404800&v=beta&t=3ytffqgWWM_mVbITGzqmWNtlgcS2QCae5RhscTYICoo"
+              "url": "https://media.licdn.com/dms/image/v2/C4D03AQFEz0j9NIAE4w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1651118238796?e=1746057600&v=beta&t=jurOAnBYFwYMvp37lC_WZblsspFFY964S9-1-bGhHSk"
             }
           ]
         }
       }
     ],
-    "receivedRecommendationCount": 4,
+    "receivedRecommendationCount": 5,
     "certifications": [
       {
         "name": "Learn React Testing Course",
@@ -959,7 +1049,7 @@
         "company": {
           "name": "Codecademy",
           "universalName": "codecademy",
-          "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQH81kKlXtE0og/company-logo_200_200/company-logo_200_200/0/1720724787444/codecademy_logo?e=1744848000&v=beta&t=pMg9T7CBT_oH1FskRavvdgVsfi7Lz_VZ5VS_LR194NM",
+          "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQH81kKlXtE0og/company-logo_200_200/company-logo_200_200/0/1720724787444/codecademy_logo?e=1748476800\u0026v=beta\u0026t=_tRn49szYR6WyovauAltqlj9aklBjZbdDfZ81CRTjR0",
           "staffCountRange": {},
           "headquarter": {}
         },
@@ -992,7 +1082,7 @@
         "company": {
           "name": "Codecademy",
           "universalName": "codecademy",
-          "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQH81kKlXtE0og/company-logo_200_200/company-logo_200_200/0/1720724787444/codecademy_logo?e=1744848000&v=beta&t=pMg9T7CBT_oH1FskRavvdgVsfi7Lz_VZ5VS_LR194NM",
+          "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQH81kKlXtE0og/company-logo_200_200/company-logo_200_200/0/1720724787444/codecademy_logo?e=1748476800\u0026v=beta\u0026t=_tRn49szYR6WyovauAltqlj9aklBjZbdDfZ81CRTjR0",
           "staffCountRange": {},
           "headquarter": {}
         },
@@ -1025,7 +1115,7 @@
         "company": {
           "name": "LinkedIn",
           "universalName": "linkedin",
-          "logo": "https://media.licdn.com/dms/image/v2/C560BAQHaVYd13rRz3A/company-logo_200_200/company-logo_200_200/0/1638831590218/linkedin_logo?e=1744848000&v=beta&t=YzSWtVgDjOjlkQ8WhICYnhJZYSpSBszznZUaAs-Alac",
+          "logo": "https://media.licdn.com/dms/image/v2/C560BAQHaVYd13rRz3A/company-logo_200_200/company-logo_200_200/0/1638831590218/linkedin_logo?e=1748476800\u0026v=beta\u0026t=cITZJnO09yqHBlZ_wKJ4HUFda2YMvLfYDFgPRHLE3mg",
           "staffCountRange": {},
           "headquarter": {}
         },
@@ -1058,7 +1148,7 @@
         "company": {
           "name": "Platzi",
           "universalName": "platzi-inc",
-          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1744848000&v=beta&t=v8ssE81PWvOehHTYjIazYXLW2sTHLLswI_BwLrP5byU",
+          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1748476800\u0026v=beta\u0026t=PypSkPBQfnvScJM8cYXEe8TH_P-krBL6uDaPjPs1CWg",
           "staffCountRange": {},
           "headquarter": {}
         },
@@ -1091,7 +1181,7 @@
         "company": {
           "name": "Platzi",
           "universalName": "platzi-inc",
-          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1744848000&v=beta&t=v8ssE81PWvOehHTYjIazYXLW2sTHLLswI_BwLrP5byU",
+          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1748476800\u0026v=beta\u0026t=PypSkPBQfnvScJM8cYXEe8TH_P-krBL6uDaPjPs1CWg",
           "staffCountRange": {},
           "headquarter": {}
         },
@@ -1124,7 +1214,7 @@
         "company": {
           "name": "Platzi",
           "universalName": "platzi-inc",
-          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1744848000&v=beta&t=v8ssE81PWvOehHTYjIazYXLW2sTHLLswI_BwLrP5byU",
+          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1748476800\u0026v=beta\u0026t=PypSkPBQfnvScJM8cYXEe8TH_P-krBL6uDaPjPs1CWg",
           "staffCountRange": {},
           "headquarter": {}
         },
@@ -1157,7 +1247,7 @@
         "company": {
           "name": "Platzi",
           "universalName": "platzi-inc",
-          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1744848000&v=beta&t=v8ssE81PWvOehHTYjIazYXLW2sTHLLswI_BwLrP5byU",
+          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1748476800\u0026v=beta\u0026t=PypSkPBQfnvScJM8cYXEe8TH_P-krBL6uDaPjPs1CWg",
           "staffCountRange": {},
           "headquarter": {}
         },
@@ -1190,7 +1280,7 @@
         "company": {
           "name": "LinkedIn",
           "universalName": "linkedin",
-          "logo": "https://media.licdn.com/dms/image/v2/C560BAQHaVYd13rRz3A/company-logo_200_200/company-logo_200_200/0/1638831590218/linkedin_logo?e=1744848000&v=beta&t=YzSWtVgDjOjlkQ8WhICYnhJZYSpSBszznZUaAs-Alac",
+          "logo": "https://media.licdn.com/dms/image/v2/C560BAQHaVYd13rRz3A/company-logo_200_200/company-logo_200_200/0/1638831590218/linkedin_logo?e=1748476800\u0026v=beta\u0026t=cITZJnO09yqHBlZ_wKJ4HUFda2YMvLfYDFgPRHLE3mg",
           "staffCountRange": {},
           "headquarter": {}
         },
@@ -1223,7 +1313,7 @@
         "company": {
           "name": "Platzi",
           "universalName": "platzi-inc",
-          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1744848000&v=beta&t=v8ssE81PWvOehHTYjIazYXLW2sTHLLswI_BwLrP5byU",
+          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1748476800\u0026v=beta\u0026t=PypSkPBQfnvScJM8cYXEe8TH_P-krBL6uDaPjPs1CWg",
           "staffCountRange": {},
           "headquarter": {}
         },
@@ -1256,7 +1346,7 @@
         "company": {
           "name": "Platzi",
           "universalName": "platzi-inc",
-          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1744848000&v=beta&t=v8ssE81PWvOehHTYjIazYXLW2sTHLLswI_BwLrP5byU",
+          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1748476800\u0026v=beta\u0026t=PypSkPBQfnvScJM8cYXEe8TH_P-krBL6uDaPjPs1CWg",
           "staffCountRange": {},
           "headquarter": {}
         },
@@ -1289,7 +1379,7 @@
         "company": {
           "name": "Platzi",
           "universalName": "platzi-inc",
-          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1744848000&v=beta&t=v8ssE81PWvOehHTYjIazYXLW2sTHLLswI_BwLrP5byU",
+          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1748476800\u0026v=beta\u0026t=PypSkPBQfnvScJM8cYXEe8TH_P-krBL6uDaPjPs1CWg",
           "staffCountRange": {},
           "headquarter": {}
         },
@@ -1322,7 +1412,7 @@
         "company": {
           "name": "Platzi",
           "universalName": "platzi-inc",
-          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1744848000&v=beta&t=v8ssE81PWvOehHTYjIazYXLW2sTHLLswI_BwLrP5byU",
+          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1748476800\u0026v=beta\u0026t=PypSkPBQfnvScJM8cYXEe8TH_P-krBL6uDaPjPs1CWg",
           "staffCountRange": {},
           "headquarter": {}
         },
@@ -1355,7 +1445,7 @@
         "company": {
           "name": "Platzi",
           "universalName": "platzi-inc",
-          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1744848000&v=beta&t=v8ssE81PWvOehHTYjIazYXLW2sTHLLswI_BwLrP5byU",
+          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1748476800\u0026v=beta\u0026t=PypSkPBQfnvScJM8cYXEe8TH_P-krBL6uDaPjPs1CWg",
           "staffCountRange": {},
           "headquarter": {}
         },
@@ -1388,7 +1478,7 @@
         "company": {
           "name": "Platzi",
           "universalName": "platzi-inc",
-          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1744848000&v=beta&t=v8ssE81PWvOehHTYjIazYXLW2sTHLLswI_BwLrP5byU",
+          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1748476800\u0026v=beta\u0026t=PypSkPBQfnvScJM8cYXEe8TH_P-krBL6uDaPjPs1CWg",
           "staffCountRange": {},
           "headquarter": {}
         },
@@ -1421,7 +1511,7 @@
         "company": {
           "name": "Platzi",
           "universalName": "platzi-inc",
-          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1744848000&v=beta&t=v8ssE81PWvOehHTYjIazYXLW2sTHLLswI_BwLrP5byU",
+          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1748476800\u0026v=beta\u0026t=PypSkPBQfnvScJM8cYXEe8TH_P-krBL6uDaPjPs1CWg",
           "staffCountRange": {},
           "headquarter": {}
         },
@@ -1454,7 +1544,7 @@
         "company": {
           "name": "Platzi",
           "universalName": "platzi-inc",
-          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1744848000&v=beta&t=v8ssE81PWvOehHTYjIazYXLW2sTHLLswI_BwLrP5byU",
+          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1748476800\u0026v=beta\u0026t=PypSkPBQfnvScJM8cYXEe8TH_P-krBL6uDaPjPs1CWg",
           "staffCountRange": {},
           "headquarter": {}
         },
@@ -1487,7 +1577,7 @@
         "company": {
           "name": "Platzi",
           "universalName": "platzi-inc",
-          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1744848000&v=beta&t=v8ssE81PWvOehHTYjIazYXLW2sTHLLswI_BwLrP5byU",
+          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1748476800\u0026v=beta\u0026t=PypSkPBQfnvScJM8cYXEe8TH_P-krBL6uDaPjPs1CWg",
           "staffCountRange": {},
           "headquarter": {}
         },
@@ -1520,7 +1610,7 @@
         "company": {
           "name": "Platzi",
           "universalName": "platzi-inc",
-          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1744848000&v=beta&t=v8ssE81PWvOehHTYjIazYXLW2sTHLLswI_BwLrP5byU",
+          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1748476800\u0026v=beta\u0026t=PypSkPBQfnvScJM8cYXEe8TH_P-krBL6uDaPjPs1CWg",
           "staffCountRange": {},
           "headquarter": {}
         },
@@ -1553,7 +1643,7 @@
         "company": {
           "name": "Platzi",
           "universalName": "platzi-inc",
-          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1744848000&v=beta&t=v8ssE81PWvOehHTYjIazYXLW2sTHLLswI_BwLrP5byU",
+          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1748476800\u0026v=beta\u0026t=PypSkPBQfnvScJM8cYXEe8TH_P-krBL6uDaPjPs1CWg",
           "staffCountRange": {},
           "headquarter": {}
         },
@@ -1586,7 +1676,7 @@
         "company": {
           "name": "Platzi",
           "universalName": "platzi-inc",
-          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1744848000&v=beta&t=v8ssE81PWvOehHTYjIazYXLW2sTHLLswI_BwLrP5byU",
+          "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1748476800\u0026v=beta\u0026t=PypSkPBQfnvScJM8cYXEe8TH_P-krBL6uDaPjPs1CWg",
           "staffCountRange": {},
           "headquarter": {}
         },
@@ -1609,7 +1699,7 @@
       "items": [
         {
           "title": "Makefy",
-          "description": "",
+          "description": "Makefy is a hub of AI tools designed to simplify various tasks and processes. Utilizing cutting-edge artificial intelligence, Makefy aims to provide users with powerful, easy-to-use solutions for their everyday needs.",
           "start": {
             "year": 2024,
             "month": 5,
@@ -1631,25 +1721,25 @@
                 {
                   "width": 100,
                   "height": 100,
-                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1676499428583?e=1742428800&v=beta&t=-dJj1Zs4mGUEX_2-06vjyqNOeUDEDAJUyC0FhbbYrAY"
+                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1676499428583?e=1746057600\u0026v=beta\u0026t=2egPND5mMRHXNGMHG0q-4m69ZaNRMquWv5uLei6GLIk"
                 },
                 {
                   "width": 200,
                   "height": 200,
-                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1676499428583?e=1742428800&v=beta&t=u5R8HRWyAEg37XOvAvqAsjWcT1dG2rWcRcrlcnkmfgw"
+                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1676499428583?e=1746057600\u0026v=beta\u0026t=2KUgaDNVT3BrBylsOFRHQNW1E03uN-QoaprR1ubV3wQ"
                 },
                 {
                   "width": 400,
                   "height": 400,
-                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1676499428583?e=1742428800&v=beta&t=1CeDUNLq68y6mWLRJfZDVrNHVlReLxk1NTBTe4jCHA0"
+                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1676499428583?e=1746057600\u0026v=beta\u0026t=W17asTBa3dQqy56CwfAAMUo1KwT9Pwwu-vyDqSP2SFo"
                 },
                 {
                   "width": 800,
                   "height": 800,
-                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1676499428583?e=1742428800&v=beta&t=dK6dGPzQrVitsFE-Mn_6Fl-8tLZ07YLAo4zw5c3V_ZU"
+                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1676499428583?e=1746057600\u0026v=beta\u0026t=U1pnuVHtWk32X3Baqz_Zo2ELVl-jnW5A1jMaZ9p1bOo"
                 }
               ],
-              "headline": "Frontend Developer at DEPT® | React, Svelte, Vue, Angular",
+              "headline": "Frontend Developer at DEPT® | React, NextJS, Astro, AI",
               "url": "https://www.linkedin.com/in/dartiles"
             }
           ]
@@ -1678,25 +1768,25 @@
                 {
                   "width": 100,
                   "height": 100,
-                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1676499428583?e=1742428800&v=beta&t=-dJj1Zs4mGUEX_2-06vjyqNOeUDEDAJUyC0FhbbYrAY"
+                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1676499428583?e=1746057600\u0026v=beta\u0026t=2egPND5mMRHXNGMHG0q-4m69ZaNRMquWv5uLei6GLIk"
                 },
                 {
                   "width": 200,
                   "height": 200,
-                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1676499428583?e=1742428800&v=beta&t=u5R8HRWyAEg37XOvAvqAsjWcT1dG2rWcRcrlcnkmfgw"
+                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1676499428583?e=1746057600\u0026v=beta\u0026t=2KUgaDNVT3BrBylsOFRHQNW1E03uN-QoaprR1ubV3wQ"
                 },
                 {
                   "width": 400,
                   "height": 400,
-                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1676499428583?e=1742428800&v=beta&t=1CeDUNLq68y6mWLRJfZDVrNHVlReLxk1NTBTe4jCHA0"
+                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1676499428583?e=1746057600\u0026v=beta\u0026t=W17asTBa3dQqy56CwfAAMUo1KwT9Pwwu-vyDqSP2SFo"
                 },
                 {
                   "width": 800,
                   "height": 800,
-                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1676499428583?e=1742428800&v=beta&t=dK6dGPzQrVitsFE-Mn_6Fl-8tLZ07YLAo4zw5c3V_ZU"
+                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1676499428583?e=1746057600\u0026v=beta\u0026t=U1pnuVHtWk32X3Baqz_Zo2ELVl-jnW5A1jMaZ9p1bOo"
                 }
               ],
-              "headline": "Frontend Developer at DEPT® | React, Svelte, Vue, Angular",
+              "headline": "Frontend Developer at DEPT® | React, NextJS, Astro, AI",
               "url": "https://www.linkedin.com/in/dartiles"
             }
           ]
@@ -1725,25 +1815,25 @@
                 {
                   "width": 100,
                   "height": 100,
-                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1676499428583?e=1742428800&v=beta&t=-dJj1Zs4mGUEX_2-06vjyqNOeUDEDAJUyC0FhbbYrAY"
+                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1676499428583?e=1746057600\u0026v=beta\u0026t=2egPND5mMRHXNGMHG0q-4m69ZaNRMquWv5uLei6GLIk"
                 },
                 {
                   "width": 200,
                   "height": 200,
-                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1676499428583?e=1742428800&v=beta&t=u5R8HRWyAEg37XOvAvqAsjWcT1dG2rWcRcrlcnkmfgw"
+                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1676499428583?e=1746057600\u0026v=beta\u0026t=2KUgaDNVT3BrBylsOFRHQNW1E03uN-QoaprR1ubV3wQ"
                 },
                 {
                   "width": 400,
                   "height": 400,
-                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1676499428583?e=1742428800&v=beta&t=1CeDUNLq68y6mWLRJfZDVrNHVlReLxk1NTBTe4jCHA0"
+                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1676499428583?e=1746057600\u0026v=beta\u0026t=W17asTBa3dQqy56CwfAAMUo1KwT9Pwwu-vyDqSP2SFo"
                 },
                 {
                   "width": 800,
                   "height": 800,
-                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1676499428583?e=1742428800&v=beta&t=dK6dGPzQrVitsFE-Mn_6Fl-8tLZ07YLAo4zw5c3V_ZU"
+                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1676499428583?e=1746057600\u0026v=beta\u0026t=U1pnuVHtWk32X3Baqz_Zo2ELVl-jnW5A1jMaZ9p1bOo"
                 }
               ],
-              "headline": "Frontend Developer at DEPT® | React, Svelte, Vue, Angular",
+              "headline": "Frontend Developer at DEPT® | React, NextJS, Astro, AI",
               "url": "https://www.linkedin.com/in/dartiles"
             }
           ]
@@ -1772,25 +1862,25 @@
                 {
                   "width": 100,
                   "height": 100,
-                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1676499428583?e=1742428800&v=beta&t=-dJj1Zs4mGUEX_2-06vjyqNOeUDEDAJUyC0FhbbYrAY"
+                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1676499428583?e=1746057600\u0026v=beta\u0026t=2egPND5mMRHXNGMHG0q-4m69ZaNRMquWv5uLei6GLIk"
                 },
                 {
                   "width": 200,
                   "height": 200,
-                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1676499428583?e=1742428800&v=beta&t=u5R8HRWyAEg37XOvAvqAsjWcT1dG2rWcRcrlcnkmfgw"
+                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1676499428583?e=1746057600\u0026v=beta\u0026t=2KUgaDNVT3BrBylsOFRHQNW1E03uN-QoaprR1ubV3wQ"
                 },
                 {
                   "width": 400,
                   "height": 400,
-                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1676499428583?e=1742428800&v=beta&t=1CeDUNLq68y6mWLRJfZDVrNHVlReLxk1NTBTe4jCHA0"
+                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1676499428583?e=1746057600\u0026v=beta\u0026t=W17asTBa3dQqy56CwfAAMUo1KwT9Pwwu-vyDqSP2SFo"
                 },
                 {
                   "width": 800,
                   "height": 800,
-                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1676499428583?e=1742428800&v=beta&t=dK6dGPzQrVitsFE-Mn_6Fl-8tLZ07YLAo4zw5c3V_ZU"
+                  "url": "https://media.licdn.com/dms/image/v2/D4D03AQHixtn89QDGWA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1676499428583?e=1746057600\u0026v=beta\u0026t=U1pnuVHtWk32X3Baqz_Zo2ELVl-jnW5A1jMaZ9p1bOo"
                 }
               ],
-              "headline": "Frontend Developer at DEPT® | React, Svelte, Vue, Angular",
+              "headline": "Frontend Developer at DEPT® | React, NextJS, Astro, AI",
               "url": "https://www.linkedin.com/in/dartiles"
             }
           ]
@@ -1810,7 +1900,7 @@
       "es": "Artiles"
     },
     "multiLocaleHeadline": {
-      "es": "Frontend Developer at DEPT® | React, Svelte, Vue, Angular"
+      "es": "Frontend Developer at DEPT® | React, NextJS, Astro, AI"
     }
   }
 }
