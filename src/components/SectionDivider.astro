@@ -1,0 +1,61 @@
+---
+// Full-viewport-width horizontal dashed divider with + cross markers
+// at the intersection points of the vertical content-column lines.
+---
+
+<div class='section-divider relative h-px hidden lg:block' aria-hidden='true'>
+  <!-- Dashed horizontal line spanning full viewport -->
+  <div
+    class='absolute inset-0'
+    style='background: linear-gradient(90deg, var(--dash-color) 50%, transparent 50%); background-size: 10px 1px;'
+  ></div>
+  <!-- Left + marker at left vertical line -->
+  <div class='cross-marker' style='left: calc((100vw - 1024px) / 2);'></div>
+  <!-- Right + marker at right vertical line -->
+  <div class='cross-marker' style='left: calc((100vw + 1024px) / 2);'></div>
+</div>
+
+<style>
+  .section-divider {
+    /* Break out of the max-w-5xl container to span full viewport */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+
+  .cross-marker {
+    position: absolute;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    transform: translate(-50%, -50%);
+  }
+
+  .cross-marker::before,
+  .cross-marker::after {
+    content: '';
+    position: absolute;
+    background: var(--dash-color);
+  }
+
+  /* Horizontal bar of + */
+  .cross-marker::before {
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  /* Vertical bar of + */
+  .cross-marker::after {
+    width: 1px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+</style>

@@ -52,6 +52,18 @@ const { title } = Astro.props;
       style='background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(99, 102, 241, 0.15), transparent)'
       aria-hidden='true'
     ></div>
+    <!-- Left vertical dashed line (content column edge) -->
+    <div
+      class='hidden lg:block fixed top-0 bottom-0 -z-10 w-px pointer-events-none'
+      style='left: calc((100vw - 1024px) / 2); background: linear-gradient(180deg, var(--dash-color) 50%, transparent 50%); background-size: 1px 10px;'
+      aria-hidden='true'
+    ></div>
+    <!-- Right vertical dashed line (content column edge) -->
+    <div
+      class='hidden lg:block fixed top-0 bottom-0 -z-10 w-px pointer-events-none'
+      style='left: calc((100vw + 1024px) / 2); background: linear-gradient(180deg, var(--dash-color) 50%, transparent 50%); background-size: 1px 10px;'
+      aria-hidden='true'
+    ></div>
     <Header />
     <main class='max-w-5xl mx-auto px-4 py-8 pt-20'>
       <slot />
@@ -74,6 +86,7 @@ const { title } = Astro.props;
     --btn-primary-bg: #111111;
     --btn-primary-text: #ffffff;
     --btn-primary-bg-hover: #222222;
+    --dash-color: rgba(0, 0, 0, 0.1);
   }
 
   :root.dark {
@@ -90,6 +103,7 @@ const { title } = Astro.props;
     --btn-primary-bg: #ffffff;
     --btn-primary-text: #000000;
     --btn-primary-bg-hover: rgba(255, 255, 255, 0.88);
+    --dash-color: rgba(255, 255, 255, 0.1);
   }
 
   html,
