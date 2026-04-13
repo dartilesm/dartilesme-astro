@@ -1,5 +1,4 @@
 ---
-import Card from "@/src/components/ui/Card.astro";
 import Button from "@/src/components/ui/Button.astro";
 import Tag from "@/src/components/ui/Tag.astro";
 import { Image } from "astro:assets";
@@ -53,7 +52,7 @@ const projects: Project[] = [
   {
     title: "AI Skill Optimizer",
     description:
-      "A static analysis engine for AI-assisted development workflows. Parses repository structures via tree input or the GitHub API, evaluates per-model coverage of rules, skills, and agent configs across Claude Code, Cursor, Gemini CLI, and Copilot, and surfaces actionable tips -- all driven by Zod-validated contracts and a stateless API.",
+      "Analyzes repositories for AI tool compatibility and rule coverage, highlighting areas for improvement with actionable tips.",
     images: [AiAnalyzerImg1, AiAnalyzerImg2],
     tags: ["Next.js 16", "TypeScript", "Zod", "Zustand", "Shadcn", "GitHub API"],
     githubUrl: "https://github.com/dartilesm/ai-skill-optimizer",
@@ -70,9 +69,9 @@ const projects: Project[] = [
     status: "in-progress",
   },
   {
-    title: "AlexGit - A Virtual Git Assistant",
+    title: "AlexGit — Virtual Git Assistant",
     description:
-      "Alexgit is an AI virtual assistant designed to help with the day-to-day tasks of Git version control system.",
+      "An AI virtual assistant designed to help with the day-to-day tasks of Git version control system.",
     images: [AlexGitProjectImg],
     tags: ["CohereAI", "Node.js"],
     githubUrl: "https://github.com/dartilesm/alexgit",
@@ -81,7 +80,7 @@ const projects: Project[] = [
   {
     title: "vue-stitches",
     description:
-      "It is a small package that helps to better use Stitches in Vue projects. Stitches (at the time I'm writing this) only has an adapted version of React, so I'm using the core version to make this package.",
+      "A small package that helps to better use Stitches in Vue projects. Stitches only has an adapted version of React, so I'm using the core version to make this package.",
     images: [VueStitchesProjectImg],
     tags: ["Vue", "Javascript"],
     githubUrl: "https://github.com/dartilesm/vue-stitches",
@@ -95,103 +94,182 @@ const projects: Project[] = [
     tags: ["Svelte"],
     liveUrl: "https://dartiles.dev",
     githubUrl: "https://github.com/dartilesm/dartiles.dev",
-    status: "completed",
+    status: "completed"
   },
 ];
 ---
 
 <section class='py-16'>
   <p class='text-xs font-medium tracking-widest uppercase text-text-muted mb-3'>Work</p>
-  <h2 class='font-heading font-bold text-3xl text-text-primary mb-10'>Featured Projects</h2>
-  <div class='grid grid-cols-1 gap-4 md:grid-cols-3'>
+  <h2 class='font-heading font-bold text-3xl text-text-primary mb-8'>Featured Projects</h2>
+
+  <div class='grid grid-cols-1 gap-3 md:grid-cols-3'>
     {
-      projects.map((project) => (
-        <Card
-          variant={project.featured ? "background" : "default"}
-          class={project.featured ? "md:col-span-3 h-[500px]" : ""}
-        >
-          {project.featured && project.images.length > 0 && (
-              <div
-                data-slideshow
-                data-slide-count={project.images.length}
-                slot='background'
-                class='w-full h-full'
-              >
-                {project.images.map((img, i) => (
-                  <Image
-                    src={img}
-                    alt={`${project.title} screenshot ${i + 1}`}
-                    data-slide-img
-                    class:list={[
-                      "slideshow-img w-full h-full object-cover transition-transform duration-300 group-hover:scale-105",
-                      { "opacity-100": i === 0, "opacity-0": i !== 0 },
-                    ]}
-                  />
-                ))}
-              </div>
-          )}
-          {project.featured && (
-              <div class='flex flex-col justify-end h-full p-6 gap-2'>
-                <div class='flex items-center gap-2'>
-                  <h3 class='font-heading font-bold text-2xl text-white'>{project.title}</h3>
-                  {project.status === "in-progress" && (
-                    <div class='flex items-center gap-2 pt-1'>
-                      <span class='relative flex h-2 w-2'>
-                          <span
-                          class="absolute inline-flex h-full w-full rounded-full opacity-75 bg-yellow-400 animate-ping"
-                          />
-                          <span
-                          class="relative inline-flex rounded-full h-2 w-2 bg-yellow-500"
-                          />
-                      </span>
-                      <span class="text-xs text-yellow-300">In Progress</span>
-                    </div>
-                  )}
-                </div>
-                <p class='text-white/80 max-w-xl text-sm leading-relaxed'>{project.description}</p>
-                <div class='flex flex-wrap gap-2 mb-4'>
-                  {project.tags.map((tag) => (
-                    <Tag class='bg-white/10 text-white'>{tag}</Tag>
+      projects.map((project, index) => {
+        const num = String(index + 1).padStart(2, "0");
+        return (
+          <div
+            class:list={[
+              "project-card group relative",
+              project.featured ? "md:col-span-3" : "",
+            ]}
+          >
+            {/* Dashed border sides */}
+            <div class='cb cb-top' aria-hidden='true' />
+            <div class='cb cb-right' aria-hidden='true' />
+            <div class='cb cb-bottom' aria-hidden='true' />
+            <div class='cb cb-left' aria-hidden='true' />
+            {/* Corner brackets */}
+            <div class='cc cc-tl' aria-hidden='true' />
+            <div class='cc cc-tr' aria-hidden='true' />
+            <div class='cc cc-bl' aria-hidden='true' />
+            <div class='cc cc-br' aria-hidden='true' />
+            {/* Project number watermark */}
+            <span class='proj-num' aria-hidden='true'>{num}</span>
+
+            {/* ── FEATURED CARD (ByteBuzz) ── */}
+            {project.featured && (
+              <div class='relative h-[480px] overflow-hidden'>
+                {/* Slideshow images */}
+                <div
+                  data-slideshow
+                  data-slide-count={project.images.length}
+                  class='absolute inset-0'
+                >
+                  {project.images.map((img, i) => (
+                    <Image
+                      src={img}
+                      alt={`${project.title} screenshot ${i + 1}`}
+                      data-slide-img
+                      class:list={[
+                        "slideshow-img w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]",
+                        { "opacity-100": i === 0, "opacity-0": i !== 0 },
+                      ]}
+                    />
                   ))}
                 </div>
-                <div class='flex items-center gap-4 flex-wrap'>
-                  {project.liveUrl && (
+                {/* Gradient overlay */}
+                <div
+                  class='absolute inset-0 pointer-events-none'
+                  style='background: linear-gradient(to top, #000 0%, #000 18%, rgba(0,0,0,0.45) 55%, transparent 100%)'
+                />
+                {/* Status badge */}
+                {project.status === "in-progress" && (
+                  <div class='absolute top-4 left-4 z-20 flex items-center gap-1.5 bg-yellow-500/15 border border-yellow-500/30 text-yellow-400 text-xs px-2.5 py-1 rounded-full font-mono'>
+                    <span class='relative flex h-1.5 w-1.5'>
+                      <span class='absolute inline-flex h-full w-full rounded-full opacity-75 bg-yellow-400 animate-ping' />
+                      <span class='relative inline-flex rounded-full h-1.5 w-1.5 bg-yellow-500' />
+                    </span>
+                    In Progress
+                  </div>
+                )}
+                {/* Content */}
+                <div class='absolute bottom-0 left-0 p-6 z-10 md:max-w-[60%]'>
+                  <h3 class='font-heading font-bold text-2xl text-white mb-2'>{project.title}</h3>
+                  <p class='text-white/70 text-sm leading-relaxed mb-3'>{project.description}</p>
+                  <div class='flex flex-wrap gap-1.5 mb-4'>
+                    {project.tags.map((tag) => (
+                      <Tag class='bg-white/10 text-white border-white/15 font-mono'>{tag}</Tag>
+                    ))}
+                  </div>
+                  <div class='flex items-center gap-3 flex-wrap'>
+                    {project.liveUrl && (
+                      <Button
+                        href={project.liveUrl}
+                        variant='primary'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        class='group/btn flex-shrink-0'
+                      >
+                        Project
+                        <Icon
+                          name='external-link'
+                          slot='icon'
+                          class='group-hover/btn:translate-x-1 transition-transform duration-200'
+                        />
+                      </Button>
+                    )}
                     <Button
-                      href={project.liveUrl}
-                      variant='primary'
+                      href={project.githubUrl}
+                      variant='ghost'
                       target='_blank'
                       rel='noopener noreferrer'
-                      class='group/button flex-shrink-0'
+                      class='text-white/80 hover:text-white group/btn flex-shrink-0'
                     >
-                      Project
+                      Code
                       <Icon
                         name='external-link'
                         slot='icon'
-                        class='group-hover/button:translate-x-1 transition-transform duration-200'
+                        class='group-hover/btn:translate-x-1 transition-transform duration-200'
                       />
                     </Button>
-                  )}
-                  <Button
-                    href={project.githubUrl}
-                    variant={project.liveUrl ? "ghost" : "primary"}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    class='text-white hover:text-slate-800 dark:hover:text-indigo-800 group/button flex-shrink-0'
+                    {project.images.length > 1 && (
+                      <div class='flex gap-1.5 ml-3' data-slideshow-dots>
+                        {project.images.map((_, i) => (
+                          <button
+                            data-slide-dot={i}
+                            class:list={[
+                              "w-1.5 h-1.5 rounded-full transition-colors duration-300 cursor-pointer",
+                              { "bg-white": i === 0, "bg-white/30 hover:bg-white/60": i !== 0 },
+                            ]}
+                            aria-label={`Go to image ${i + 1}`}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* ── STANDARD CARD ── */}
+            {!project.featured && (
+              <div class='flex flex-col h-full'>
+                {/* Image area */}
+                <div class='relative overflow-hidden' style='aspect-ratio: 16/10;'>
+                  <div
+                    data-slideshow
+                    data-slide-count={project.images.length}
+                    class='absolute inset-0'
                   >
-                    Code
-                    <Icon
-                        name='external-link'
-                        slot='icon'
-                        class='group-hover/button:translate-x-1 transition-transform duration-200'
+                    {project.images.map((img, i) => (
+                      <Image
+                        src={img}
+                        alt={`${project.title} screenshot ${i + 1}`}
+                        data-slide-img
+                        class:list={[
+                          "slideshow-img w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]",
+                          { "opacity-100": i === 0, "opacity-0": i !== 0 },
+                        ]}
                       />
-                  </Button>
+                    ))}
+                  </div>
+                  {/* Bottom fade into page bg */}
+                  <div
+                    class='absolute bottom-0 inset-x-0 h-14 pointer-events-none'
+                    style='background: linear-gradient(to top, var(--color-bg) 0%, transparent 100%)'
+                  />
+                  {/* Status badge */}
+                  {project.status === "in-progress" && (
+                    <div class='absolute top-3 left-3 z-10 flex items-center gap-1.5 bg-yellow-500/15 border border-yellow-500/30 text-yellow-400 text-xs px-2 py-0.5 rounded-full font-mono'>
+                      <span class='relative flex h-1.5 w-1.5'>
+                        <span class='absolute inline-flex h-full w-full rounded-full opacity-75 bg-yellow-400 animate-ping' />
+                        <span class='relative inline-flex rounded-full h-1.5 w-1.5 bg-yellow-500' />
+                      </span>
+                      In Progress
+                    </div>
+                  )}
+                  {/* Slideshow dots */}
                   {project.images.length > 1 && (
-                    <div class='flex gap-1.5 ml-auto' data-slideshow-dots>
+                    <div
+                      class='absolute bottom-2 right-3 flex gap-1.5 z-10'
+                      data-slideshow-dots
+                    >
                       {project.images.map((_, i) => (
                         <button
                           data-slide-dot={i}
                           class:list={[
-                            "w-2 h-2 rounded-full transition-colors duration-300 cursor-pointer",
+                            "w-1.5 h-1.5 rounded-full transition-colors duration-300 cursor-pointer shadow-sm",
                             { "bg-white": i === 0, "bg-white/40 hover:bg-white/60": i !== 0 },
                           ]}
                           aria-label={`Go to image ${i + 1}`}
@@ -200,101 +278,57 @@ const projects: Project[] = [
                     </div>
                   )}
                 </div>
-              </div>
-          )}
-          {!project.featured && project.images.length > 0 && (
-              <div
-                data-slideshow
-                data-slide-count={project.images.length}
-                class='relative h-60 overflow-hidden'
-              >
-                {project.images.map((img, i) => (
-                  <Image
-                    src={img}
-                    alt={`${project.title} screenshot ${i + 1}`}
-                    data-slide-img
-                    class:list={[
-                      "slideshow-img w-full h-60 object-cover",
-                      { "opacity-100": i === 0, "opacity-0": i !== 0 },
-                    ]}
-                  />
-                ))}
-                {project.images.length > 1 && (
-                  <div class='absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-10' data-slideshow-dots>
-                    {project.images.map((_, i) => (
-                      <button
-                        data-slide-dot={i}
-                        class:list={[
-                          "w-2 h-2 rounded-full transition-colors duration-300 cursor-pointer shadow-sm",
-                          { "bg-white": i === 0, "bg-white/40 hover:bg-white/60": i !== 0 },
-                        ]}
-                        aria-label={`Go to image ${i + 1}`}
-                      />
-                    ))}
-                  </div>
-                )}
-              </div>
-          )}
-          {!project.featured && (
-              <div class='p-6 flex gap-2 flex-col items-between'>
-                <div class='flex items-between gap-2 '>
-                  <h3 class='font-heading font-semibold text-lg text-text-primary'>{project.title}</h3>
-                  {project.status === "in-progress" && (
-                    <div class='flex items-center gap-2 pt-1'>
-                      <span class='relative flex h-2 w-2'>
-                          <span
-                          class="absolute inline-flex h-full w-full rounded-full opacity-75 bg-yellow-400 animate-ping  "
-                          />
-                          <span
-                          class="relative inline-flex rounded-full h-2 w-2 bg-yellow-500"
-                          />
-                      </span>
-                      <span class="text-xs text-yellow-300">In Progress</span>
+                {/* Content */}
+                <div class='p-5 flex flex-col gap-2 flex-1'>
+                  <h3 class='font-heading font-semibold text-base text-text-primary leading-tight'>
+                    {project.title}
+                  </h3>
+                  <div class='flex-1'>
+                    <p class='text-text-secondary text-sm leading-relaxed'>{project.description}</p>
+                    <div class='flex flex-wrap gap-1.5 mt-1'>
+                      {project.tags.map((tag) => (
+                        <Tag>{tag}</Tag>
+                      ))}
                     </div>
-                  )}
-                </div>
-                <p class='text-text-secondary text-sm leading-relaxed'>{project.description}</p>
-                <div class='flex flex-wrap gap-2 mb-4'>
-                  {project.tags.map((tag) => (
-                    <Tag>{tag}</Tag>
-                  ))}
-                </div>
-                <div class='flex gap-x-4 flex-wrap'>
-                  {project.liveUrl && (
+                  </div>
+                  <div class='flex gap-3 flex-wrap mt-2'>
+                    {project.liveUrl && (
+                      <Button
+                        href={project.liveUrl}
+                        variant='primary'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        class='group/btn flex-shrink-0'
+                      >
+                        Project
+                        <Icon
+                          name='external-link'
+                          slot='icon'
+                          class='group-hover/btn:translate-x-1 transition-transform duration-200'
+                        />
+                      </Button>
+                    )}
                     <Button
-                      href={project.liveUrl}
-                      variant='primary'
+                      href={project.githubUrl}
+                      variant={project.liveUrl ? "ghost" : "primary"}
                       target='_blank'
                       rel='noopener noreferrer'
-                      class='group/button flex-shrink-0'
+                      class='group/btn flex-shrink-0'
                     >
-                      Project
+                      Code
                       <Icon
                         name='external-link'
                         slot='icon'
-                        class='group-hover/button:translate-x-1 transition-transform duration-200'
+                        class='group-hover/btn:translate-x-1 transition-transform duration-200'
                       />
                     </Button>
-                  )}
-                  <Button
-                    href={project.githubUrl}
-                    variant={project.liveUrl ? "ghost" : "primary"}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    class='group/button flex-shrink-0'
-                  >
-                    Code
-                    <Icon
-                        name='external-link'
-                        slot='icon'
-                        class='group-hover/button:translate-x-1 transition-transform duration-200'
-                      />
-                  </Button>
+                  </div>
                 </div>
               </div>
-          )}
-        </Card>
-      ))
+            )}
+          </div>
+        );
+      })
     }
   </div>
 </section>
@@ -304,6 +338,99 @@ const projects: Project[] = [
     position: absolute;
     inset: 0;
     transition: opacity 700ms ease-in-out;
+  }
+
+  /* ── Dashed border sides ──────────────────────────── */
+  .cb {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .cb-top {
+    top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, rgba(99, 102, 241, 0.25) 50%, transparent 50%);
+    background-size: 8px 1px;
+  }
+  .cb-right {
+    top: 0; right: 0; bottom: 0; width: 1px;
+    background: linear-gradient(180deg, rgba(99, 102, 241, 0.25) 50%, transparent 50%);
+    background-size: 1px 8px;
+  }
+  .cb-bottom {
+    bottom: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, rgba(99, 102, 241, 0.25) 50%, transparent 50%);
+    background-size: 8px 1px;
+  }
+  .cb-left {
+    top: 0; left: 0; bottom: 0; width: 1px;
+    background: linear-gradient(180deg, rgba(99, 102, 241, 0.25) 50%, transparent 50%);
+    background-size: 1px 8px;
+  }
+
+  .project-card:hover .cb-top,
+  .project-card:hover .cb-bottom {
+    background: linear-gradient(90deg, rgba(99, 102, 241, 0.55) 50%, transparent 50%);
+    background-size: 8px 1px;
+  }
+  .project-card:hover .cb-right,
+  .project-card:hover .cb-left {
+    background: linear-gradient(180deg, rgba(99, 102, 241, 0.55) 50%, transparent 50%);
+    background-size: 1px 8px;
+  }
+
+  /* ── Corner brackets ──────────────────────────────── */
+  .cc {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .cc::before,
+  .cc::after {
+    content: '';
+    position: absolute;
+    background: rgba(99, 102, 241, 0.45);
+    transition: background 0.3s ease;
+  }
+  .project-card:hover .cc::before,
+  .project-card:hover .cc::after {
+    background: rgba(99, 102, 241, 0.9);
+  }
+
+  .cc-tl { top: -1px; left: -1px; }
+  .cc-tl::before { width: 100%; height: 2px; top: 0; left: 0; }
+  .cc-tl::after  { width: 2px; height: 100%; top: 0; left: 0; }
+
+  .cc-tr { top: -1px; right: -1px; }
+  .cc-tr::before { width: 100%; height: 2px; top: 0; right: 0; }
+  .cc-tr::after  { width: 2px; height: 100%; top: 0; right: 0; }
+
+  .cc-bl { bottom: -1px; left: -1px; }
+  .cc-bl::before { width: 100%; height: 2px; bottom: 0; left: 0; }
+  .cc-bl::after  { width: 2px; height: 100%; bottom: 0; left: 0; }
+
+  .cc-br { bottom: -1px; right: -1px; }
+  .cc-br::before { width: 100%; height: 2px; bottom: 0; right: 0; }
+  .cc-br::after  { width: 2px; height: 100%; bottom: 0; right: 0; }
+
+  /* ── Project number watermark ─────────────────────── */
+  .proj-num {
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1;
+    color: rgba(99, 102, 241, 0.07);
+    pointer-events: none;
+    z-index: 2;
+    transition: color 0.3s ease;
+    user-select: none;
+  }
+  .project-card:hover .proj-num {
+    color: rgba(99, 102, 241, 0.14);
   }
 </style>
 
@@ -316,7 +443,7 @@ const projects: Project[] = [
       const images = container.querySelectorAll<HTMLElement>("[data-slide-img]");
       const dotsContainer =
         container.querySelector("[data-slideshow-dots]") ||
-        container.closest("article")?.querySelector("[data-slideshow-dots]");
+        container.closest("div[class*='project-card']")?.querySelector("[data-slideshow-dots]");
       const dots = dotsContainer
         ? dotsContainer.querySelectorAll<HTMLButtonElement>("[data-slide-dot]")
         : [];
@@ -331,7 +458,7 @@ const projects: Project[] = [
         });
         dots.forEach(function (dot, i) {
           dot.classList.toggle("bg-white", i === index);
-          dot.classList.toggle("bg-white/40", i !== index);
+          dot.classList.toggle("bg-white/30", i !== index);
           dot.classList.toggle("hover:bg-white/60", i !== index);
         });
         active = index;
