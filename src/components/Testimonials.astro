@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import Card from "@/src/components/ui/Card.astro";
 import Button from "@/src/components/ui/Button.astro";
 import { Icon } from "astro-icon/components";
 import linkedinProfileData from "@/src/assets/linkedin-profile-data.json";
@@ -24,11 +23,26 @@ function getDateFromTimestamp(timestamp: number) {
     <p class='text-xs font-medium tracking-widest uppercase text-text-muted mb-3'>Testimonials</p>
     <h2 class='font-heading font-bold text-3xl text-text-primary'>What people say about me</h2>
   </div>
-  <div class='columns-1 gap-4 sm:columns-2 md:columns-2'>
+
+  <div class='columns-1 gap-3 sm:columns-2'>
     {
       recommendations.map((recommendation) => (
-        <Card class='h-fit mb-4'>
-          <div class='p-6 flex flex-col gap-4 h-full'>
+        <div class='testimonial-card group relative mb-3 break-inside-avoid'>
+          {/* Dashed border sides */}
+          <div class='cb cb-top' aria-hidden='true' />
+          <div class='cb cb-right' aria-hidden='true' />
+          <div class='cb cb-bottom' aria-hidden='true' />
+          <div class='cb cb-left' aria-hidden='true' />
+          {/* Corner brackets */}
+          <div class='cc cc-tl' aria-hidden='true' />
+          <div class='cc cc-tr' aria-hidden='true' />
+          <div class='cc cc-bl' aria-hidden='true' />
+          <div class='cc cc-br' aria-hidden='true' />
+          {/* Large quote watermark */}
+          <span class='quote-mark' aria-hidden='true'>&ldquo;</span>
+
+          <div class='card-inner relative z-10 p-6 flex flex-col gap-4 bg-surface'>
+            {/* Author header */}
             <div class='flex items-start gap-4'>
               <div class='flex-shrink-0 relative'>
                 {recommendation.recommender.profilePictures[0].url ? (
@@ -37,7 +51,7 @@ function getDateFromTimestamp(timestamp: number) {
                     alt={`${recommendation.recommender.firstName} ${recommendation.recommender.lastName}`}
                     width={48}
                     height={48}
-                    class='rounded-full object-cover ring-1 ring-border ring-offset-1 ring-offset-surface'
+                    class='rounded-full object-cover avatar-img'
                   />
                 ) : (
                   <Image
@@ -45,7 +59,7 @@ function getDateFromTimestamp(timestamp: number) {
                     alt={`${recommendation.recommender.firstName} ${recommendation.recommender.lastName}`}
                     width={48}
                     height={48}
-                    class='rounded-full object-cover ring-1 ring-border ring-offset-1 ring-offset-surface'
+                    class='rounded-full object-cover avatar-img'
                   />
                 )}
                 <div class='absolute -bottom-1 -right-1 bg-[#0A66C2] rounded-full p-1'>
@@ -56,26 +70,29 @@ function getDateFromTimestamp(timestamp: number) {
                 <h3 class='font-heading font-semibold text-text-primary'>
                   {recommendation.recommender.firstName} {recommendation.recommender.lastName}
                 </h3>
-                <p class='text-text-muted text-xs font-medium'>
+                <p class='text-text-muted text-xs font-medium mt-0.5'>
                   {recommendation.recommender.occupation}
                 </p>
-                <p class='text-text-muted text-xs font-light'>
+                <p class='text-text-muted text-xs font-mono mt-0.5'>
                   {getLinkedinRelationship(
                     recommendation.relationship,
                     recommendation.recommender.firstName
                   )}{" "}
-                  • {getDateFromTimestamp(recommendation.created)}
+                  &bull; {getDateFromTimestamp(recommendation.created)}
                 </p>
               </div>
             </div>
-            <blockquote class='text-text-secondary text-sm leading-relaxed flex-grow italic'>
+
+            {/* Quote text */}
+            <blockquote class='text-text-secondary text-sm leading-relaxed italic'>
               {recommendation.text}
             </blockquote>
           </div>
-        </Card>
+        </div>
       ))
     }
   </div>
+
   <div class='flex flex-col justify-center items-center gap-4 mt-8'>
     <h3 class='text-text-muted text-sm'>Did you work with me?</h3>
     <Button
@@ -96,13 +113,120 @@ function getDateFromTimestamp(timestamp: number) {
 </section>
 
 <style>
-  blockquote::before {
-    content: '\201C';
-    font-size: 2rem;
-    line-height: 0;
-    vertical-align: -0.5rem;
-    color: var(--color-accent);
-    opacity: 0.4;
-    margin-right: 0.25rem;
+  /* ── Card base ──────────────────────────────────────── */
+  .testimonial-card {
+    position: relative;
+    overflow: hidden;
   }
+
+  /* Editorial left accent stripe */
+  .testimonial-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 16px;
+    bottom: 16px;
+    width: 2px;
+    background: linear-gradient(to bottom, rgba(99, 102, 241, 0.55), rgba(99, 102, 241, 0.1));
+    z-index: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  /* ── Large quote watermark ──────────────────────────── */
+  .quote-mark {
+    position: absolute;
+    bottom: -12px;
+    right: 12px;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(5rem, 10vw, 8rem);
+    line-height: 1;
+    color: rgba(99, 102, 241, 0.06);
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+    transition: color 0.3s ease;
+  }
+  .testimonial-card:hover .quote-mark {
+    color: rgba(99, 102, 241, 0.12);
+  }
+
+  /* ── Avatar accent ring ─────────────────────────────── */
+  .avatar-img {
+    box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.3), 0 0 0 3px rgba(99, 102, 241, 0.08);
+  }
+
+  /* ── Dashed border sides ──────────────────────────── */
+  .cb {
+    position: absolute;
+    pointer-events: none;
+    z-index: 20;
+  }
+  .cb-top {
+    top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, rgba(99, 102, 241, 0.25) 50%, transparent 50%);
+    background-size: 8px 1px;
+  }
+  .cb-right {
+    top: 0; right: 0; bottom: 0; width: 1px;
+    background: linear-gradient(180deg, rgba(99, 102, 241, 0.25) 50%, transparent 50%);
+    background-size: 1px 8px;
+  }
+  .cb-bottom {
+    bottom: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, rgba(99, 102, 241, 0.25) 50%, transparent 50%);
+    background-size: 8px 1px;
+  }
+  .cb-left {
+    top: 0; left: 0; bottom: 0; width: 1px;
+    background: linear-gradient(180deg, rgba(99, 102, 241, 0.25) 50%, transparent 50%);
+    background-size: 1px 8px;
+  }
+
+  .testimonial-card:hover .cb-top,
+  .testimonial-card:hover .cb-bottom {
+    background: linear-gradient(90deg, rgba(99, 102, 241, 0.55) 50%, transparent 50%);
+    background-size: 8px 1px;
+  }
+  .testimonial-card:hover .cb-right,
+  .testimonial-card:hover .cb-left {
+    background: linear-gradient(180deg, rgba(99, 102, 241, 0.55) 50%, transparent 50%);
+    background-size: 1px 8px;
+  }
+
+  /* ── Corner brackets ──────────────────────────────── */
+  .cc {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    pointer-events: none;
+    z-index: 20;
+  }
+  .cc::before,
+  .cc::after {
+    content: '';
+    position: absolute;
+    background: rgba(99, 102, 241, 0.45);
+    transition: background 0.3s ease;
+  }
+  .testimonial-card:hover .cc::before,
+  .testimonial-card:hover .cc::after {
+    background: rgba(99, 102, 241, 0.9);
+  }
+
+  .cc-tl { top: -1px; left: -1px; }
+  .cc-tl::before { width: 100%; height: 2px; top: 0; left: 0; }
+  .cc-tl::after  { width: 2px; height: 100%; top: 0; left: 0; }
+
+  .cc-tr { top: -1px; right: -1px; }
+  .cc-tr::before { width: 100%; height: 2px; top: 0; right: 0; }
+  .cc-tr::after  { width: 2px; height: 100%; top: 0; right: 0; }
+
+  .cc-bl { bottom: -1px; left: -1px; }
+  .cc-bl::before { width: 100%; height: 2px; bottom: 0; left: 0; }
+  .cc-bl::after  { width: 2px; height: 100%; bottom: 0; left: 0; }
+
+  .cc-br { bottom: -1px; right: -1px; }
+  .cc-br::before { width: 100%; height: 2px; bottom: 0; right: 0; }
+  .cc-br::after  { width: 2px; height: 100%; bottom: 0; right: 0; }
 </style>
