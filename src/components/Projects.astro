@@ -4,15 +4,24 @@ import Button from "@/src/components/ui/Button.astro";
 import Tag from "@/src/components/ui/Tag.astro";
 import { Image } from "astro:assets";
 import MakefyProjectImg from "@/src/assets/makefy.jpeg";
+import MakefyProjectImg2 from "@/src/assets/makefy2.jpeg";
 import BlogProjectImg from "@/src/assets/blog.jpeg";
 import AlexGitProjectImg from "@/src/assets/alexgit.png";
 import VueStitchesProjectImg from "@/src/assets/vue-stitches.webp";
+import ByteBuzzImg1 from "@/src/assets/bytebuzz-1.png";
+import ByteBuzzImg2 from "@/src/assets/bytebuzz-2.png";
+import ByteBuzzImg3 from "@/src/assets/bytebuzz-3.png";
+import ByteBuzzImg4 from "@/src/assets/bytebuzz-4.png";
+import ByteBuzzImg5 from "@/src/assets/bytebuzz-5.png";
+import ByteBuzzImg6 from "@/src/assets/bytebuzz-6.png";
+import AiAnalyzerImg1 from "@/src/assets/ai-analyzer.png";
+import AiAnalyzerImg2 from "@/src/assets/ai-analyzer-2.png";
 import { Icon } from "astro-icon/components";
 
 interface Project {
   title: string;
   description: string;
-  image: ImageMetadata;
+  images: ImageMetadata[];
   tags: string[];
   liveUrl?: string;
   githubUrl: string;
@@ -22,21 +31,40 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "ByteBuzz",
+    description:
+      "A modern social platform for developers and tech enthusiasts to share code snippets, tech news, programming memes, and connect with like-minded peers.",
+    images: [ByteBuzzImg1, ByteBuzzImg2, ByteBuzzImg3, ByteBuzzImg4, ByteBuzzImg5, ByteBuzzImg6],
+    tags: ["Next.js", "React", "Supabase", "TypeScript", "Clerk"],
+    liveUrl: "https://bytebuzz.dev",
+    githubUrl: "https://github.com/dartilesm/bytebuzz",
+    status: "in-progress",
+    featured: true,
+  },
+  {
+    title: "AI Skill Optimizer",
+    description:
+      "A developer tool that analyzes project file structures and reports which AI model skills, rules, and agent instructions are discoverable, missing, or misconfigured across tools like Claude Code, Cursor, and Gemini CLI.",
+    images: [AiAnalyzerImg1, AiAnalyzerImg2],
+    tags: ["Next.js", "TypeScript", "Zustand", "Shadcn"],
+    githubUrl: "https://github.com/dartilesm/ai-skill-optimizer",
+    status: "in-progress",
+  },
+  {
     title: "Makefy",
     description:
       "A monorepo project of a collection of AI tools to accelerate your work. Including a chat-with-pdf, text tools like Q&A generator, Podcast script generator, and more.",
-    image: MakefyProjectImg,
+    images: [MakefyProjectImg, MakefyProjectImg2],
     tags: ["Next.js", "Supabase", "Shadcn", "AI Vercel SDK"],
     liveUrl: "https://makefy.app",
     githubUrl: "https://github.com/dartilesm/makefy",
     status: "in-progress",
-    featured: true,
   },
   {
     title: "AlexGit - A Virtual Git Assistant",
     description:
       "Alexgit is an AI virtual assistant designed to help with the day-to-day tasks of Git version control system.",
-    image: AlexGitProjectImg,
+    images: [AlexGitProjectImg],
     tags: ["CohereAI", "Node.js"],
     githubUrl: "https://github.com/dartilesm/alexgit",
     status: "completed",
@@ -45,7 +73,7 @@ const projects: Project[] = [
     title: "vue-stitches",
     description:
       "It is a small package that helps to better use Stitches in Vue projects. Stitches (at the time I'm writing this) only has an adapted version of React, so I'm using the core version to make this package.",
-    image: VueStitchesProjectImg,
+    images: [VueStitchesProjectImg],
     tags: ["Vue", "Javascript"],
     githubUrl: "https://github.com/dartilesm/vue-stitches",
     status: "completed",
@@ -54,7 +82,7 @@ const projects: Project[] = [
     title: "DartilesDev",
     description:
       "A personal blog platform built to share technical knowledge and insights about web development, focusing on modern frontend technologies and best practices.",
-    image: BlogProjectImg,
+    images: [BlogProjectImg],
     tags: ["Svelte"],
     liveUrl: "https://dartiles.dev",
     githubUrl: "https://github.com/dartilesm/dartiles.dev",
@@ -72,13 +100,27 @@ const projects: Project[] = [
           variant={project.featured ? "background" : "default"}
           class={project.featured ? "md:col-span-3 h-[500px]" : ""}
         >
-          {project.featured && (
-              <Image
-                src={project.image}
-                alt={project.title}
+          {project.featured && project.images.length > 0 && (
+              <div
+                data-slideshow
+                data-slide-count={project.images.length}
                 slot='background'
-                class='w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 absolute -z-10'
-              />
+                class='w-full h-full'
+              >
+                {project.images.map((img, i) => (
+                  <Image
+                    src={img}
+                    alt={`${project.title} screenshot ${i + 1}`}
+                    data-slide-img
+                    class:list={[
+                      "slideshow-img w-full h-full object-cover transition-transform duration-300 group-hover:scale-105",
+                      { "opacity-100": i === 0, "opacity-0": i !== 0 },
+                    ]}
+                  />
+                ))}
+              </div>
+          )}
+          {project.featured && (
               <div class='flex flex-col justify-end h-full p-6 gap-2'>
                 <div class='flex items-center gap-2'>
                   <h3 class='text-2xl font-semibold text-white'>{project.title}</h3>
@@ -102,7 +144,7 @@ const projects: Project[] = [
                     <Tag class='bg-white/10 text-white'>{tag}</Tag>
                   ))}
                 </div>
-                <div class='flex gap-4 flex-wrap'>
+                <div class='flex items-center gap-4 flex-wrap'>
                   {project.liveUrl && (
                     <Button
                       href={project.liveUrl}
@@ -133,11 +175,57 @@ const projects: Project[] = [
                         class='group-hover/button:translate-x-1 transition-transform duration-200'
                       />
                   </Button>
+                  {project.images.length > 1 && (
+                    <div class='flex gap-1.5 ml-auto' data-slideshow-dots>
+                      {project.images.map((_, i) => (
+                        <button
+                          data-slide-dot={i}
+                          class:list={[
+                            "w-2 h-2 rounded-full transition-colors duration-300 cursor-pointer",
+                            { "bg-white": i === 0, "bg-white/40 hover:bg-white/60": i !== 0 },
+                          ]}
+                          aria-label={`Go to image ${i + 1}`}
+                        />
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
           )}
+          {!project.featured && project.images.length > 0 && (
+              <div
+                data-slideshow
+                data-slide-count={project.images.length}
+                class='relative h-60 overflow-hidden'
+              >
+                {project.images.map((img, i) => (
+                  <Image
+                    src={img}
+                    alt={`${project.title} screenshot ${i + 1}`}
+                    data-slide-img
+                    class:list={[
+                      "slideshow-img w-full h-60 object-cover",
+                      { "opacity-100": i === 0, "opacity-0": i !== 0 },
+                    ]}
+                  />
+                ))}
+                {project.images.length > 1 && (
+                  <div class='absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-10' data-slideshow-dots>
+                    {project.images.map((_, i) => (
+                      <button
+                        data-slide-dot={i}
+                        class:list={[
+                          "w-2 h-2 rounded-full transition-colors duration-300 cursor-pointer shadow-sm",
+                          { "bg-white": i === 0, "bg-white/40 hover:bg-white/60": i !== 0 },
+                        ]}
+                        aria-label={`Go to image ${i + 1}`}
+                      />
+                    ))}
+                  </div>
+                )}
+              </div>
+          )}
           {!project.featured && (
-              <Image src={project.image} alt={project.title} class='w-full h-60 object-cover' />
               <div class='p-6 flex gap-2 flex-col items-between'>
                 <div class='flex items-between gap-2 '>
                   <h3 class='text-xl font-semibold'>{project.title}</h3>
@@ -200,3 +288,65 @@ const projects: Project[] = [
     }
   </div>
 </section>
+
+<style>
+  .slideshow-img {
+    position: absolute;
+    inset: 0;
+    transition: opacity 700ms ease-in-out;
+  }
+</style>
+
+<script>
+  function initSlideshows() {
+    document.querySelectorAll<HTMLElement>("[data-slideshow]").forEach(function (container) {
+      const count = parseInt(container.dataset.slideCount || "0", 10);
+      if (count <= 1) return;
+
+      const images = container.querySelectorAll<HTMLElement>("[data-slide-img]");
+      const dotsContainer =
+        container.querySelector("[data-slideshow-dots]") ||
+        container.closest("article")?.querySelector("[data-slideshow-dots]");
+      const dots = dotsContainer
+        ? dotsContainer.querySelectorAll<HTMLButtonElement>("[data-slide-dot]")
+        : [];
+
+      let active = 0;
+      let paused = false;
+
+      function goTo(index: number) {
+        images.forEach(function (img, i) {
+          img.classList.toggle("opacity-100", i === index);
+          img.classList.toggle("opacity-0", i !== index);
+        });
+        dots.forEach(function (dot, i) {
+          dot.classList.toggle("bg-white", i === index);
+          dot.classList.toggle("bg-white/40", i !== index);
+          dot.classList.toggle("hover:bg-white/60", i !== index);
+        });
+        active = index;
+      }
+
+      const intervalId = setInterval(function () {
+        if (paused) return;
+        goTo((active + 1) % count);
+      }, 4000);
+
+      dots.forEach(function (dot) {
+        dot.addEventListener("click", function () {
+          const targetIndex = parseInt(dot.dataset.slideDot || "0", 10);
+          if (targetIndex === active) {
+            paused = !paused;
+            return;
+          }
+          paused = true;
+          goTo(targetIndex);
+        });
+      });
+
+      container.dataset.intervalId = String(intervalId);
+    });
+  }
+
+  initSlideshows();
+</script>
