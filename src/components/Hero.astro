@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import DiegoPhoto from "@/src/assets/me3.png";
+import DiegoPhoto from "@/src/assets/me4.png";
 import { Icon } from "astro-icon/components";
 import Button from "@/src/components/ui/Button.astro";
 
@@ -90,30 +90,47 @@ const yearsOfExperience = new Date().getFullYear() - 2017;
       class='flex justify-end max-md:justify-center w-full'
       style='animation: fadeInUp 0.6s ease-out 0.3s forwards; opacity: 0;'
     >
-      <div class='relative w-64 sm:w-72 overflow-hidden rounded-2xl h-fit'>
-        <Image
-          src={DiegoPhoto}
-          alt='Diego Artiles'
-          class='w-full object-cover object-center'
-        />
-        <!-- Bottom fade — covers abrupt cutoff -->
-        <div
-          class='absolute bottom-0 left-0 right-0 pointer-events-none'
-          style='height: 55%; background: linear-gradient(to top, var(--color-bg) 0%, var(--color-bg) 15%, transparent 100%)'
-          aria-hidden='true'
-        ></div>
-        <!-- Left-side fade — hides equipment in bottom-left corner -->
-        <div
-          class='absolute inset-y-0 left-0 pointer-events-none'
-          style='width: 40%; background: linear-gradient(to right, var(--color-bg) 0%, transparent 100%)'
-          aria-hidden='true'
-        ></div>
-        <!-- Right-side fade — balances the left fade -->
-        <div
-          class='absolute inset-y-0 right-0 pointer-events-none'
-          style='width: 15%; background: linear-gradient(to left, var(--color-bg) 0%, transparent 100%)'
-          aria-hidden='true'
-        ></div>
+      <!-- Outer wrapper allows decorative elements to extend beyond image bounds -->
+      <div class='photo-outer relative w-64 sm:w-72 h-fit'>
+        <!-- Dashed frame sides (matching section divider style) -->
+        <div class='frame-side frame-top' aria-hidden='true'></div>
+        <div class='frame-side frame-right' aria-hidden='true'></div>
+        <div class='frame-side frame-bottom' aria-hidden='true'></div>
+        <div class='frame-side frame-left' aria-hidden='true'></div>
+        <!-- Corner bracket: top-left -->
+        <div class='corner corner-tl' aria-hidden='true'></div>
+        <!-- Corner bracket: top-right -->
+        <div class='corner corner-tr' aria-hidden='true'></div>
+        <!-- Corner bracket: bottom-left -->
+        <div class='corner corner-bl' aria-hidden='true'></div>
+        <!-- Corner bracket: bottom-right -->
+        <div class='corner corner-br' aria-hidden='true'></div>
+        <!-- Image container with fades -->
+        <div class='photo-inner relative overflow-hidden'>
+          <Image
+            src={DiegoPhoto}
+            alt='Diego Artiles'
+            class='w-full object-cover object-center'
+          />
+          <!-- Bottom fade — covers abrupt cutoff -->
+          <div
+            class='absolute bottom-0 left-0 right-0 pointer-events-none'
+            style='height: 55%; background: linear-gradient(to top, var(--color-bg) 0%, var(--color-bg) 8%, transparent 100%)'
+            aria-hidden='true'
+          ></div>
+          <!-- Left-side fade — hides equipment in bottom-left corner -->
+          <div
+            class='absolute inset-y-0 left-0 pointer-events-none'
+            style='width: 22%; background: linear-gradient(to right, var(--color-bg) 0%, transparent 100%)'
+            aria-hidden='true'
+          ></div>
+          <!-- Right-side fade — balances the left fade -->
+          <div
+            class='absolute inset-y-0 right-0 pointer-events-none'
+            style='width: 15%; background: linear-gradient(to left, var(--color-bg) 0%, transparent 100%)'
+            aria-hidden='true'
+          ></div>
+        </div>
       </div>
     </div>
   </div>
@@ -123,6 +140,97 @@ const yearsOfExperience = new Date().getFullYear() - 2017;
   .hero-heading {
     font-size: clamp(2.5rem, 5vw, 3.75rem);
   }
+
+  /* ── Photo treatment ─────────────────────────────── */
+
+  .photo-inner {
+    box-shadow: 0 8px 40px -8px rgba(99, 102, 241, 0.3);
+  }
+
+  /* ── Dashed frame sides (same gradient-dash as SectionDivider) ── */
+  .frame-side {
+    position: absolute;
+    pointer-events: none;
+    transition: transform 0.4s ease;
+  }
+
+  /* Top edge */
+  .frame-top {
+    top: -10px; left: 10px; right: -10px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(99,102,241,0.5) 50%, transparent 50%);
+    background-size: 8px 1px;
+  }
+  /* Right edge */
+  .frame-right {
+    top: -10px; right: -10px; bottom: 10px;
+    width: 1px;
+    background: linear-gradient(180deg, rgba(99,102,241,0.5) 50%, transparent 50%);
+    background-size: 1px 8px;
+  }
+  /* Bottom edge */
+  .frame-bottom {
+    bottom: 10px; left: 10px; right: -10px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(99,102,241,0.5) 50%, transparent 50%);
+    background-size: 8px 1px;
+  }
+  /* Left edge */
+  .frame-left {
+    top: -10px; left: 10px; bottom: 10px;
+    width: 1px;
+    background: linear-gradient(180deg, rgba(99,102,241,0.5) 50%, transparent 50%);
+    background-size: 1px 8px;
+  }
+
+  .photo-outer:hover .frame-top,
+  .photo-outer:hover .frame-right,
+  .photo-outer:hover .frame-bottom,
+  .photo-outer:hover .frame-left {
+    filter: brightness(1.4);
+  }
+
+  /* Corner bracket shared styles */
+  .corner {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  .corner::before,
+  .corner::after {
+    content: '';
+    position: absolute;
+    background: rgba(99, 102, 241, 0.65);
+    transition: background 0.3s ease;
+  }
+
+  .photo-outer:hover .corner::before,
+  .photo-outer:hover .corner::after {
+    background: rgba(99, 102, 241, 0.85);
+  }
+
+  /* Top-left: border-top + border-left */
+  .corner-tl { top: -1px; left: -1px; }
+  .corner-tl::before { width: 100%; height: 2px; top: 0; left: 0; }
+  .corner-tl::after  { width: 2px; height: 100%; top: 0; left: 0; }
+
+  /* Top-right: border-top + border-right */
+  .corner-tr { top: -1px; right: -1px; }
+  .corner-tr::before { width: 100%; height: 2px; top: 0; right: 0; }
+  .corner-tr::after  { width: 2px; height: 100%; top: 0; right: 0; }
+
+  /* Bottom-left: border-bottom + border-left */
+  .corner-bl { bottom: -1px; left: -1px; }
+  .corner-bl::before { width: 100%; height: 2px; bottom: 0; left: 0; }
+  .corner-bl::after  { width: 2px; height: 100%; bottom: 0; left: 0; }
+
+  /* Bottom-right: border-bottom + border-right */
+  .corner-br { bottom: -1px; right: -1px; }
+  .corner-br::before { width: 100%; height: 2px; bottom: 0; right: 0; }
+  .corner-br::after  { width: 2px; height: 100%; bottom: 0; right: 0; }
 
   @keyframes fadeInUp {
     0% {
