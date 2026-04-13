@@ -26,9 +26,9 @@ import { Icon } from "astro-icon/components";
 <script>
   function getTheme() {
     if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
-      return localStorage.getItem("theme") ?? "";
+      return localStorage.getItem("theme") ?? "dark";
     }
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    return "dark"; // Always default to dark mode
   }
 
   function setTheme(theme: string) {

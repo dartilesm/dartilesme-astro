@@ -9,9 +9,15 @@ import logo from "@/src/assets/logo.webp";
   id='header'
   data-scrolled='false'
 >
-  <div class='max-w-5xl mx-auto px-4 py-3 flex justify-between items-center'>
+  <div class='max-w-5xl mx-auto px-4 py-4 flex justify-between items-center'>
     <a href='/' class='flex items-center gap-2'>
-      <Image src={logo} alt='Logo' width={32} height={32} class='w-8 h-8' />
+      <Image
+        src={logo}
+        alt='Logo'
+        width={32}
+        height={32}
+        class='w-8 h-8 opacity-80 hover:opacity-100 transition-opacity duration-150'
+      />
     </a>
     <ThemeToggle />
   </div>
@@ -34,8 +40,17 @@ import logo from "@/src/assets/logo.webp";
 </script>
 
 <style>
-  /* Apply background styles based on data-scrolled attribute */
   header[data-scrolled="true"] {
-    @apply bg-white/80 dark:bg-slate-950/80 backdrop-blur;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  :root:not(.dark) header[data-scrolled="true"] {
+    background: rgba(250, 250, 250, 0.9);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
 </style>

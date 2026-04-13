@@ -21,14 +21,37 @@ const { title } = Astro.props;
     <link rel='icon' type='image/webp' href={logo.src} />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap'
+      rel='stylesheet'
+    />
   </head>
   <body
-    class='bg-slate-100 dark:bg-slate-950 text-slate-900 dark:text-slate-50 transition-colors overflow-x-hidden'
+    class='bg-background text-text-primary font-body transition-colors duration-300 overflow-x-hidden'
   >
+    <!-- Light mode background: subtle dark lines on near-white -->
     <div
-      class='absolute top-0 -z-10 h-screen w-screen bg-slate-100 dark:bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]'
-    >
-    </div>
+      class='dark:hidden fixed inset-0 -z-20'
+      style="background-color: #fafafa; background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M0 0h40v40H0z' fill='none'/%3E%3Cline x1='0' y1='0' x2='0' y2='40' stroke='rgba(0%2C0%2C0%2C0.05)' stroke-width='0.5'/%3E%3Cline x1='40' y1='0' x2='40' y2='40' stroke='rgba(0%2C0%2C0%2C0.05)' stroke-width='0.5'/%3E%3Cline x1='0' y1='0' x2='40' y2='0' stroke='rgba(0%2C0%2C0%2C0.05)' stroke-width='0.5'/%3E%3Cline x1='0' y1='40' x2='40' y2='40' stroke='rgba(0%2C0%2C0%2C0.05)' stroke-width='0.5'/%3E%3C/svg%3E\");"
+      aria-hidden='true'
+    ></div>
+    <!-- Dark mode background: subtle white lines on black -->
+    <div
+      class='hidden dark:block fixed inset-0 -z-20'
+      style="background-color: #000000; background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M0 0h40v40H0z' fill='none'/%3E%3Cline x1='0' y1='0' x2='0' y2='40' stroke='rgba(255%2C255%2C255%2C0.05)' stroke-width='0.5'/%3E%3Cline x1='40' y1='0' x2='40' y2='40' stroke='rgba(255%2C255%2C255%2C0.05)' stroke-width='0.5'/%3E%3Cline x1='0' y1='0' x2='40' y2='0' stroke='rgba(255%2C255%2C255%2C0.05)' stroke-width='0.5'/%3E%3Cline x1='0' y1='40' x2='40' y2='40' stroke='rgba(255%2C255%2C255%2C0.05)' stroke-width='0.5'/%3E%3C/svg%3E\");"
+      aria-hidden='true'
+    ></div>
+    <!-- Top radial indigo glow — lighter on light mode -->
+    <div class='dark:hidden fixed top-0 left-0 right-0 -z-10 h-[600px] pointer-events-none'
+      style='background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(99, 102, 241, 0.08), transparent)'
+      aria-hidden='true'
+    ></div>
+    <div class='hidden dark:block fixed top-0 left-0 right-0 -z-10 h-[600px] pointer-events-none'
+      style='background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(99, 102, 241, 0.15), transparent)'
+      aria-hidden='true'
+    ></div>
     <Header />
     <main class='max-w-5xl mx-auto px-4 py-8 pt-20'>
       <slot />
@@ -36,7 +59,39 @@ const { title } = Astro.props;
   </body>
 </html>
 
-<style>
+<style is:global>
+  :root {
+    --color-bg: #fafafa;
+    --color-surface: #ffffff;
+    --color-surface-2: #f4f4f5;
+    --color-border: rgba(0, 0, 0, 0.1);
+    --color-border-hover: rgba(0, 0, 0, 0.2);
+    --color-text-primary: #111111;
+    --color-text-secondary: rgba(17, 17, 17, 0.6);
+    --color-text-muted: rgba(17, 17, 17, 0.4);
+    --color-accent: #6366f1;
+    --color-accent-hover: #4f52e0;
+    --btn-primary-bg: #111111;
+    --btn-primary-text: #ffffff;
+    --btn-primary-bg-hover: #222222;
+  }
+
+  :root.dark {
+    --color-bg: #000000;
+    --color-surface: #111111;
+    --color-surface-2: #1a1a1a;
+    --color-border: rgba(255, 255, 255, 0.08);
+    --color-border-hover: rgba(255, 255, 255, 0.15);
+    --color-text-primary: #ededed;
+    --color-text-secondary: rgba(237, 237, 237, 0.6);
+    --color-text-muted: rgba(237, 237, 237, 0.4);
+    --color-accent: #6366f1;
+    --color-accent-hover: #818cf8;
+    --btn-primary-bg: #ffffff;
+    --btn-primary-text: #000000;
+    --btn-primary-bg-hover: rgba(255, 255, 255, 0.88);
+  }
+
   html,
   body {
     margin: 0;

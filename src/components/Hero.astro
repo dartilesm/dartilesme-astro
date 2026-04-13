@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import DiegoPhoto from "@/src/assets/me2.png";
+import DiegoPhoto from "@/src/assets/me3.png";
 import { Icon } from "astro-icon/components";
 import Button from "@/src/components/ui/Button.astro";
 
@@ -31,14 +31,21 @@ const socialLinks: SocialLink[] = [
 const yearsOfExperience = new Date().getFullYear() - 2017;
 ---
 
-<section class='py-16 sm:py-20'>
+<section class='py-16 sm:py-24'>
   <div class='flex flex-col-reverse gap-12 md:flex-row md:gap-8'>
-    <div class='space-y-4 max-w-[500px] w-full'>
-      <h1 class='text-3xl font-bold tracking-tight sm:text-5xl'>Hi, I'm Diego Artiles</h1>
-      <h2 class='text-xl font-semibold text-indigo-600 dark:text-indigo-400'>
-        Frontend-Focused Full-Stack Developer
+    <div
+      class='space-y-6 max-w-[520px] w-full'
+      style='animation: fadeInUp 0.6s ease-out 0.1s forwards; opacity: 0;'
+    >
+      <h1
+        class='font-heading font-extrabold tracking-tight text-text-primary text-4xl sm:text-6xl lg:text-7xl leading-[1.05]'
+      >
+        Hi, I'm Diego Artiles
+      </h1>
+      <h2 class='font-body text-base font-medium tracking-widest uppercase text-accent'>
+        Frontend Developer
       </h2>
-      <p class='text-slate-600 dark:text-slate-400 max-w-prose'>
+      <p class='text-text-secondary leading-relaxed max-w-[480px] text-base'>
         {yearsOfExperience}+ years as a frontend-focused full-stack engineer on{" "}
         <strong>Next.js</strong>, <strong>React</strong>, and <strong>TypeScript</strong>. I build
         with <strong>Shadcn</strong>, <strong>TanStack Query</strong>, <strong>Zod</strong>,{" "}
@@ -46,7 +53,7 @@ const yearsOfExperience = new Date().getFullYear() - 2017;
         Monaco when products need rich editing.
         Building developer tools and social platforms.
       </p>
-      <ul class='flex'>
+      <ul class='flex items-center gap-1 flex-wrap'>
         {
           socialLinks.map((socialLink) => (
             <li>
@@ -61,7 +68,7 @@ const yearsOfExperience = new Date().getFullYear() - 2017;
             </li>
           ))
         }
-        <li>
+        <li class='ml-2'>
           <Button
             href='https://dartiles.link/cv'
             variant='primary'
@@ -79,10 +86,52 @@ const yearsOfExperience = new Date().getFullYear() - 2017;
         </li>
       </ul>
     </div>
-    <div class='flex justify-end max-md:justify-center w-full'>
-      <div>
-        <Image src={DiegoPhoto} alt='Diego Artiles' class='aspect-[9/11] max-w-60' />
+    <div
+      class='flex justify-end max-md:justify-center w-full'
+      style='animation: fadeInUp 0.6s ease-out 0.3s forwards; opacity: 0;'
+    >
+      <div class='relative w-64 sm:w-72 overflow-hidden rounded-2xl h-fit'>
+        <Image
+          src={DiegoPhoto}
+          alt='Diego Artiles'
+          class='w-full object-cover object-center'
+        />
+        <!-- Bottom fade — covers abrupt cutoff -->
+        <div
+          class='absolute bottom-0 left-0 right-0 pointer-events-none'
+          style='height: 55%; background: linear-gradient(to top, var(--color-bg) 0%, var(--color-bg) 15%, transparent 100%)'
+          aria-hidden='true'
+        ></div>
+        <!-- Left-side fade — hides equipment in bottom-left corner -->
+        <div
+          class='absolute inset-y-0 left-0 pointer-events-none'
+          style='width: 40%; background: linear-gradient(to right, var(--color-bg) 0%, transparent 100%)'
+          aria-hidden='true'
+        ></div>
+        <!-- Right-side fade — balances the left fade -->
+        <div
+          class='absolute inset-y-0 right-0 pointer-events-none'
+          style='width: 15%; background: linear-gradient(to left, var(--color-bg) 0%, transparent 100%)'
+          aria-hidden='true'
+        ></div>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .hero-heading {
+    font-size: clamp(2.5rem, 5vw, 3.75rem);
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
