@@ -34,7 +34,7 @@ const { title } = Astro.props;
     <!-- Light mode background: subtle dark lines on near-white -->
     <div
       class='dark:hidden fixed inset-0 -z-20'
-      style="background-color: #fafafa; background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M0 0h40v40H0z' fill='none'/%3E%3Cline x1='0' y1='0' x2='0' y2='40' stroke='rgba(0%2C0%2C0%2C0.05)' stroke-width='0.5'/%3E%3Cline x1='40' y1='0' x2='40' y2='40' stroke='rgba(0%2C0%2C0%2C0.05)' stroke-width='0.5'/%3E%3Cline x1='0' y1='0' x2='40' y2='0' stroke='rgba(0%2C0%2C0%2C0.05)' stroke-width='0.5'/%3E%3Cline x1='0' y1='40' x2='40' y2='40' stroke='rgba(0%2C0%2C0%2C0.05)' stroke-width='0.5'/%3E%3C/svg%3E\");"
+      style="background-color: #e8e4de; background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M0 0h40v40H0z' fill='none'/%3E%3Cline x1='0' y1='0' x2='0' y2='40' stroke='rgba(0%2C0%2C0%2C0.07)' stroke-width='0.5'/%3E%3Cline x1='40' y1='0' x2='40' y2='40' stroke='rgba(0%2C0%2C0%2C0.07)' stroke-width='0.5'/%3E%3Cline x1='0' y1='0' x2='40' y2='0' stroke='rgba(0%2C0%2C0%2C0.07)' stroke-width='0.5'/%3E%3Cline x1='0' y1='40' x2='40' y2='40' stroke='rgba(0%2C0%2C0%2C0.07)' stroke-width='0.5'/%3E%3C/svg%3E\");"
       aria-hidden='true'
     ></div>
     <!-- Dark mode background: subtle white lines on black -->
@@ -45,7 +45,7 @@ const { title } = Astro.props;
     ></div>
     <!-- Top radial indigo glow — lighter on light mode -->
     <div class='dark:hidden fixed top-0 left-0 right-0 -z-10 h-[600px] pointer-events-none'
-      style='background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(99, 102, 241, 0.08), transparent)'
+      style='background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(99, 102, 241, 0.1), transparent)'
       aria-hidden='true'
     ></div>
     <div class='hidden dark:block fixed top-0 left-0 right-0 -z-10 h-[600px] pointer-events-none'
@@ -73,20 +73,20 @@ const { title } = Astro.props;
 
 <style is:global>
   :root {
-    --color-bg: #fafafa;
-    --color-surface: #ffffff;
-    --color-surface-2: #f4f4f5;
-    --color-border: rgba(0, 0, 0, 0.1);
-    --color-border-hover: rgba(0, 0, 0, 0.2);
-    --color-text-primary: #111111;
-    --color-text-secondary: rgba(17, 17, 17, 0.6);
-    --color-text-muted: rgba(17, 17, 17, 0.4);
+    --color-bg: #e8e4de;
+    --color-surface: #f0ece6;
+    --color-surface-2: #ddd9d3;
+    --color-border: rgba(0, 0, 0, 0.12);
+    --color-border-hover: rgba(0, 0, 0, 0.22);
+    --color-text-primary: #1a1714;
+    --color-text-secondary: rgba(26, 23, 20, 0.6);
+    --color-text-muted: rgba(26, 23, 20, 0.4);
     --color-accent: #6366f1;
     --color-accent-hover: #4f52e0;
-    --btn-primary-bg: #111111;
+    --btn-primary-bg: #1a1714;
     --btn-primary-text: #ffffff;
-    --btn-primary-bg-hover: #222222;
-    --dash-color: rgba(0, 0, 0, 0.1);
+    --btn-primary-bg-hover: #2e2a26;
+    --dash-color: rgba(0, 0, 0, 0.13);
   }
 
   :root.dark {
