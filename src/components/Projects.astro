@@ -33,9 +33,18 @@ const projects: Project[] = [
   {
     title: "ByteBuzz",
     description:
-      "A modern social platform for developers and tech enthusiasts to share code snippets, tech news, programming memes, and connect with like-minded peers.",
+      "A full-stack social platform for developers featuring rich-text and code-snippet authoring powered by Lexical and Monaco, real-time feeds backed by Supabase, type-safe APIs with Zod and TanStack Query, and Clerk-based authentication with RLS policies.",
     images: [ByteBuzzImg1, ByteBuzzImg2, ByteBuzzImg3, ByteBuzzImg4, ByteBuzzImg5, ByteBuzzImg6],
-    tags: ["Next.js", "React", "Supabase", "TypeScript", "Clerk"],
+    tags: [
+      "Next.js 16",
+      "React 19",
+      "TanStack Query",
+      "Supabase",
+      "Lexical",
+      "Zod",
+      "Clerk",
+      "Tailwind CSS 4",
+    ],
     liveUrl: "https://bytebuzz.dev",
     githubUrl: "https://github.com/dartilesm/bytebuzz",
     status: "in-progress",
@@ -44,9 +53,9 @@ const projects: Project[] = [
   {
     title: "AI Skill Optimizer",
     description:
-      "A developer tool that analyzes project file structures and reports which AI model skills, rules, and agent instructions are discoverable, missing, or misconfigured across tools like Claude Code, Cursor, and Gemini CLI.",
+      "A static analysis engine for AI-assisted development workflows. Parses repository structures via tree input or the GitHub API, evaluates per-model coverage of rules, skills, and agent configs across Claude Code, Cursor, Gemini CLI, and Copilot, and surfaces actionable tips -- all driven by Zod-validated contracts and a stateless API.",
     images: [AiAnalyzerImg1, AiAnalyzerImg2],
-    tags: ["Next.js", "TypeScript", "Zustand", "Shadcn"],
+    tags: ["Next.js 16", "TypeScript", "Zod", "Zustand", "Shadcn", "GitHub API"],
     githubUrl: "https://github.com/dartilesm/ai-skill-optimizer",
     status: "in-progress",
   },
@@ -55,7 +64,7 @@ const projects: Project[] = [
     description:
       "A monorepo project of a collection of AI tools to accelerate your work. Including a chat-with-pdf, text tools like Q&A generator, Podcast script generator, and more.",
     images: [MakefyProjectImg, MakefyProjectImg2],
-    tags: ["Next.js", "Supabase", "Shadcn", "AI Vercel SDK"],
+    tags: ["Next.js", "Supabase", "Shadcn", "Vercel AI SDK"],
     liveUrl: "https://makefy.app",
     githubUrl: "https://github.com/dartilesm/makefy",
     status: "in-progress",
